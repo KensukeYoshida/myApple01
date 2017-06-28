@@ -10,7 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var myFrame: UITextField!
+    
+    @IBOutlet weak var myFrame: UILabel!
     
 
     override func viewDidLoad() {
