@@ -17,6 +17,21 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var txtTitle3: UILabel!
     
+    @IBOutlet weak var imageLock1: UIImageView!
+    
+    @IBOutlet weak var imageLock2: UIImageView!
+    
+    @IBOutlet weak var imageLock3: UIImageView!
+    
+    
+    
+    var lock1 = true
+    
+    var lock2 = true
+    
+    var lock3 = true
+    
+    
 
 //    override func viewWillAppear(_ animated: Bool) {
 //        
@@ -38,6 +53,7 @@ class FirstViewController: UIViewController {
         //AppDelegateを使う用意しておく
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        
         // エンティティを操作するためのオブジェクトを作成
         let viewContext = appDelegate.persistentContainer.viewContext
         
@@ -57,16 +73,16 @@ class FirstViewController: UIViewController {
             
             if r == n {
                 if s == r {
-                    s += 1
+                    s -= 1
                 }
             }
             
             var t = Int(arc4random()) % n
             if t == r || t == s {
-                t += 1
+                t -= 1
             }
             
-            var lock1 = true
+           
             
             //ループで一行ずつ表示
             for result:AnyObject in fetchResults{
@@ -79,10 +95,14 @@ class FirstViewController: UIViewController {
 //                    txtTitle1.text = title
                 }
                 else if n == s {
+                    if lock2 == true{
                     txtTitle2.text = title
+                    }
                 }
                 else if n == t {
+                    if lock3 == true {
                     txtTitle3.text = title
+                    }
                 }
                 
                 n -= 1
@@ -116,12 +136,20 @@ class FirstViewController: UIViewController {
         read()
     }
     
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//    appDlegate.selectedWord1 = txtTitle1.text!
     
     
     @IBAction func tapButtonToDetail(_ sender: UIButton) {
         performSegue(withIdentifier: "showDetail", sender: nil)
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.selectedWord1 = txtTitle1.text!
+        appDelegate.selectedWord2 = txtTitle2.text!
+        appDelegate.selectedWord3 = txtTitle3.text!
+        
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -136,6 +164,48 @@ class FirstViewController: UIViewController {
     }
 
 
+    @IBAction func tapLock1(_ sender: UITapGestureRecognizer) {
+        
+        if lock1 == true {
+            lock1=false
+            imageLock1.image=UIImage(named: "key_ios.png")
+        }else{
+            lock1=true
+            imageLock1.image=UIImage(named: "open_key_ios.png")
+        }
+        
+    }
+    
+    @IBAction func tapLock2(_ sender: UITapGestureRecognizer) {
+        
+        if lock2 == true {
+            lock2=false
+            imageLock2.image=UIImage(named: "key_ios.png")
+        }else{
+            lock2=true
+            imageLock2.image=UIImage(named: "open_key_ios.png")
+        }
+        
+
+    }
+    
+    @IBAction func tapLock3(_ sender: UITapGestureRecognizer) {
+    
+        if lock3 == true {
+            lock3=false
+            imageLock3.image=UIImage(named: "key_ios.png")
+        }else{
+            lock3=true
+            imageLock3.image=UIImage(named: "open_key_ios.png")
+        }
+
+    
+    }
+    
+    
+    
+    
+    
 
 
     
