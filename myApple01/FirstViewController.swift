@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
 
 //    override func viewWillAppear(_ animated: Bool) {
 //        
-    var words = ["恋","回","3","4","5","6","7","8","9","10","11","12","13"]
+//    var words = ["恋","回","3","4","5","6","7","8","9","10","11","12","13"]
 
     
     
@@ -54,20 +54,29 @@ class FirstViewController: UIViewController {
             
             var r = Int(arc4random()) % n
             var s = Int(arc4random()) % n
-            if s == r {
-                s += 1
+            
+            if r == n {
+                if s == r {
+                    s += 1
+                }
             }
-            let t = Int(arc4random()) % n
+            
+            var t = Int(arc4random()) % n
             if t == r || t == s {
-                
+                t += 1
             }
+            
+            var lock1 = true
             
             //ループで一行ずつ表示
             for result:AnyObject in fetchResults{
                 let title: String = result.value(forKey:"title") as! String
                 
                 if n == r {
+                    if lock1 == true {
                     txtTitle1.text = title
+                    }
+//                    txtTitle1.text = title
                 }
                 else if n == s {
                     txtTitle2.text = title
@@ -106,6 +115,14 @@ class FirstViewController: UIViewController {
     @IBAction func reshow(_ sender: UIButton) {
         read()
     }
+    
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    
+    @IBAction func tapButtonToDetail(_ sender: UIButton) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

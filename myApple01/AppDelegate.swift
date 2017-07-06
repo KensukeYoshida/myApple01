@@ -13,6 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //重複するデータをAppDelegateのプロパティ作成
+    var selectedWord1:String = ""
+    var selectedWord2:String = ""
+    var selectedWord3:String = ""
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
