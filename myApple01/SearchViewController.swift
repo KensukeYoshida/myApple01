@@ -1,19 +1,14 @@
 //
-//  SaveViewController.swift
+//  SearchViewController.swift
 //  myApple01
 //
-//  Created by kensuke yoshida on 2017/07/06.
+//  Created by kensuke yoshida on 2017/07/07.
 //  Copyright © 2017年 kensuke yoshida. All rights reserved.
 //
 
 import UIKit
 
-class SaveViewController: UIViewController {
-    
-    
-    
-
-    
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -26,6 +26,9 @@
 		47B7DF591F02975F0073E63B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B7DF571F02975F0073E63B /* LaunchScreen.storyboard */; };
 		47B7DF641F02975F0073E63B /* myApple01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DF631F02975F0073E63B /* myApple01Tests.swift */; };
 		47B7DF6F1F02975F0073E63B /* myApple01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DF6E1F02975F0073E63B /* myApple01UITests.swift */; };
+		47EBF17A1F0F5B290073F27C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EBF1791F0F5B290073F27C /* libxml2.tbd */; };
+		47EBF17C1F0F5BD80073F27C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EBF17B1F0F5BD80073F27C /* SearchViewController.swift */; };
+		47EBF17E1F0F5C800073F27C /* SearchResoultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EBF17D1F0F5C800073F27C /* SearchResoultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		47B7DF6A1F02975F0073E63B /* myApple01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myApple01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B7DF6E1F02975F0073E63B /* myApple01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myApple01UITests.swift; sourceTree = "<group>"; };
 		47B7DF701F02975F0073E63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47EBF1791F0F5B290073F27C /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		47EBF17B1F0F5BD80073F27C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		47EBF17D1F0F5C800073F27C /* SearchResoultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResoultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EBF17A1F0F5B290073F27C /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +114,7 @@
 				47B7DF621F02975F0073E63B /* myApple01Tests */,
 				47B7DF6D1F02975F0073E63B /* myApple01UITests */,
 				47B7DF4A1F02975F0073E63B /* Products */,
+				47EBF1781F0F5B290073F27C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +141,8 @@
 				47B7DF4E1F02975F0073E63B /* FirstViewController.swift */,
 				47B7DF501F02975F0073E63B /* SecondViewController.swift */,
 				47B7DF521F02975F0073E63B /* Main.storyboard */,
+				47EBF17D1F0F5C800073F27C /* SearchResoultViewController.swift */,
+				47EBF17B1F0F5BD80073F27C /* SearchViewController.swift */,
 				4728C9861F0E7E6D0012AFAB /* SaveViewController.swift */,
 				4728C9701F0E13140012AFAB /* DetailViewController.swift */,
 				47B7DF551F02975F0073E63B /* Assets.xcassets */,
@@ -159,6 +169,14 @@
 				47B7DF701F02975F0073E63B /* Info.plist */,
 			);
 			path = myApple01UITests;
+			sourceTree = "<group>";
+		};
+		47EBF1781F0F5B290073F27C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47EBF1791F0F5B290073F27C /* libxml2.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +322,8 @@
 				47B7DF511F02975F0073E63B /* SecondViewController.swift in Sources */,
 				4728C9871F0E7E6D0012AFAB /* SaveViewController.swift in Sources */,
 				475BC5771F063B9800284623 /* Words+CoreDataProperties.swift in Sources */,
+				47EBF17E1F0F5C800073F27C /* SearchResoultViewController.swift in Sources */,
+				47EBF17C1F0F5BD80073F27C /* SearchViewController.swift in Sources */,
 				47B7DF4D1F02975F0073E63B /* AppDelegate.swift in Sources */,
 				47B7DF4F1F02975F0073E63B /* FirstViewController.swift in Sources */,
 				475BC5761F063B9800284623 /* Words+CoreDataClass.swift in Sources */,
