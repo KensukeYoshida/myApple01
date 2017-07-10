@@ -10,6 +10,11 @@ import UIKit
 
 class SaveViewController: UIViewController {
     
+    @IBOutlet weak var myLabel1: UILabel!
+    
+    @IBOutlet weak var myLabel2: UILabel!
+    
+    @IBOutlet weak var myLabel3: UILabel!
     
     
 
@@ -18,7 +23,15 @@ class SaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+//        myLabel1.text = appDelegate.selectedWord1
+//        myLabel2.text = appDelegate.selectedWord2
+//        myLabel3.text = appDelegate.selectedWord3
+        
+        //self.myLabel1 = appDelegate.amount[0][0]
+
+
     }
 
     override func didReceiveMemoryWarning() {

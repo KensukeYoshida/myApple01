@@ -26,6 +26,7 @@ class SearchResoultViewController: UIViewController,XMLParserDelegate {
     }
     
     
+    
     @IBAction func tapReturn(_ sender: UITextField) {
         
         // XML解析実行
@@ -33,7 +34,12 @@ class SearchResoultViewController: UIViewController,XMLParserDelegate {
         myCount = 1
         
         loadxml()
-        
+
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     //①セルの個数(行数)を指定するデリゲートメソッド（必須）
@@ -45,12 +51,7 @@ class SearchResoultViewController: UIViewController,XMLParserDelegate {
     }
     
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     // XMLを解析する
     func loadxml(){
         

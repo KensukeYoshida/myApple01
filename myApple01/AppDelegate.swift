@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedWord2:String = ""
     var selectedWord3:String = ""
     
+    //データの配列を用意
+    var amount:NSArray = [""]
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
