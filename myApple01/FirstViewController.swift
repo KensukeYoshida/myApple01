@@ -107,9 +107,9 @@ class FirstViewController: UIViewController {
                 
                 n -= 1
                 
-                let saveDate: Date = result.value(forKey:"saveDate") as! Date
-                
-                print("title:\(title) saveDate:\(saveDate)")
+//                let saveDate: Date = result.value(forKey:"saveDate") as! Date
+//                
+//                print("title:\(title) saveDate:\(saveDate)")
                 
                 
             }

@@ -50,12 +50,9 @@ class SearchViewController: UIViewController,XMLParserDelegate {
 
         
     }
+   
     
-    @IBAction func tapButton(_ sender: UIButton) {
-        
-        myCount = 1
-        
-        loadxml()
+    @IBAction func tapResearchBtn(_ sender: UIButton) {
     }
     
     

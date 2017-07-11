@@ -4,7 +4,6 @@
 //
 //  Created by kensuke yoshida on 2017/07/06.
 //  Copyright © 2017年 kensuke yoshida. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -38,11 +37,14 @@ class DetailViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+        
+        
     }
     
-    //保存ボタンが押された時(Createの処理)
+    
+    
+
     @IBAction func tapSave(_ sender: UIButton) {
-        
         //AppDelegateのインスタンスを用意しておく (as!はダウンキャスト ＜値＞as!＜型＞)
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -50,7 +52,7 @@ class DetailViewController: UIViewController {
         let viewContext = appDelegate.persistentContainer.viewContext
         
         //Wordsエンティティオブジェクトを作成
-        let Words = NSEntityDescription.entity(forEntityName: "Words", in: viewContext)
+        let Words = NSEntityDescription.entity(forEntityName: "Ideas", in: viewContext)
         
         //Wordsエンティティにレコード(行)を挿入するためのオブジェクトを作成
         let newRecord = NSManagedObject(entity: Words!, insertInto: viewContext)
@@ -62,14 +64,27 @@ class DetailViewController: UIViewController {
         newRecord.setValue(myLabel2.text, forKey: "title2")//値の代入
         newRecord.setValue(myLabel3.text, forKey: "title3")//値の代入
         
+        newRecord.setValue(myTextView.text, forKey: "memo")//値の代入
+        
+        
         newRecord.setValue(Date(),forKey: "saveDate")
         //Date():現在日時がセットできる
         
         words.append(myLabel1.text!)
         memo.append(myTextView.text!)
         
+        //レコード（行）の即時保存
+        do{
+            try viewContext.save()
+        }catch{
+        }
         
     }
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

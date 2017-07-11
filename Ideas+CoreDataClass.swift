@@ -1,5 +1,5 @@
 //
-//  Words+CoreDataClass.swift
+//  Ideas+CoreDataClass.swift
 //  myApple01
 //
 //  Created by kensuke yoshida on 2017/07/11.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class Words: NSManagedObject {
+public class Ideas: NSManagedObject {
 
 }
