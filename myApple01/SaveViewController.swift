@@ -36,6 +36,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         //文字色変更
         //cell.textLabel?.textColor = UIColor.brown
         cell.myLabel1.text = words[indexPath.row]
+        cell.myLabel2.text = words[indexPath.row]
         cell.saveDateLabel.text = "表示したい日付"
         
         return cell
@@ -85,6 +86,41 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             //エラーが起きた時に通常処理の代わりに行う処理を記述(例外処理を記述する場所)
         }
         
+        
+        func read(){
+            //AppDelegateを使う用意しておく
+            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            //エンティティを操作するためのオブジェクトを作成
+            let viewContext = appDelegate.persistentContainer.viewContext
+            
+            //どのエンティティからデータを取得してくるか設定
+            let query : NSFetchRequest<Ideas> = Ideas.fetchRequest()
+            
+            //エラーが起きやすく、例外処理を書く必要がありそうな処理はdoで囲んでおく必要がある
+            //例)CoreDataのようなDB処理、インターネット接続
+            do{
+                //データを取得
+                let fetchResults = try viewContext.fetch(query)
+                
+                //ループで一行ずつ表示
+                for result:AnyObject in fetchResults{
+                    let title: String = result.value(forKey:"title2") as! String
+                    
+                    let saveDate: Date = result.value(forKey:"saveDate") as! Date
+                    
+                    print("title2:\(title) saveDate:\(saveDate)")
+                    
+                    words.append(title)
+                }
+                
+                
+                
+            }catch{
+                //エラーが起きた時に通常処理の代わりに行う処理を記述(例外処理を記述する場所)
+            }
+            
+
         //データを一括取得
         
         //ループで一行ずつ表示
@@ -97,7 +133,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     
 
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -113,4 +149,5 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     */
 
+}
 }
