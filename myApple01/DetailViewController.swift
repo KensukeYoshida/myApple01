@@ -18,10 +18,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var myTextView: UITextView!
     
+    @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
     //メンバ変数
     var words = ["myLabel1.text = appDelegate.selectedWord1", "myLabel2.text = appDelegate.selectedWord2","myLabel3.text = appDelegate.selectedWord3"]
     
     var memo = [""]
+    
+    var sIndex = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()

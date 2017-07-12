@@ -53,6 +53,15 @@ class SearchViewController: UIViewController,XMLParserDelegate {
    
     
     @IBAction func tapResearchBtn(_ sender: UIButton) {
+        
+        // XML解析実行
+        //一旦1にリセット
+        myCount = 1
+        
+        loadxml()
+        
+
+        
     }
     
     
@@ -72,8 +81,11 @@ class SearchViewController: UIViewController,XMLParserDelegate {
             "!*'();:@&=+$,/?%#[]" as CFString!,
             CFStringBuiltInEncodings.UTF8.rawValue) as String
         
+        print(txtSearchword.text)
+        
         
         let url_text = "http://www.google.com/complete/search?hl=en&q="+encodedString+"&output=toolbar".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
         
         
         

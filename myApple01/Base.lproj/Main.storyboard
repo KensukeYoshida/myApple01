@@ -115,7 +115,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jCM-6k-7Pc"/>
+                    <navigationItem key="navigationItem" id="jCM-6k-7Pc">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="D4R-Wi-MBQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I1O-s9-hTy">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapBtn:" destination="Fwa-b7-rKl" eventType="touchUpInside" id="gkW-3P-Sjx"/>
+                                    <segue destination="c1r-BK-YFe" kind="show" id="n1n-Ik-eGa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="savetitleTableView" destination="Ag1-Ff-Bs9" id="Pik-qE-dqt"/>
                     </connections>
@@ -300,7 +313,7 @@
         <!--Detail View Controller-->
         <scene sceneID="F9d-RJ-eAM">
             <objects>
-                <viewController id="c1r-BK-YFe" customClass="DetailViewController" customModule="myApple01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="c1r-BK-YFe" customClass="DetailViewController" customModule="myApple01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cgX-0z-ZpK"/>
                         <viewControllerLayoutGuide type="bottom" id="rcB-GK-lmO"/>
@@ -412,7 +425,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="検索"/>
                                 <connections>
-                                    <action selector="tapResearchBtn:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="Mnf-dp-bLG"/>
+                                    <action selector="tapResearchBtn:" destination="9mO-nw-EHE" eventType="touchUpInside" id="k6S-4O-af9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="検索結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-GW-u1o">
@@ -738,5 +751,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pNO-XJ-edx"/>
+        <segue reference="n1n-Ik-eGa"/>
     </inferredMetricsTieBreakers>
 </document>
