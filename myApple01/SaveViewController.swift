@@ -53,9 +53,9 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBAction func tapBtn(_ sender: UIButton) {
         
        
-            let next = storyboard!.instantiateViewController(withIdentifier: "DetailViewController")
-            self.present(next,animated: true, completion: nil)
-            
+//            let next = storyboard!.instantiateViewController(withIdentifier: "DetailViewController")
+//            self.present(next,animated: true, completion: nil)
+        
         
 
     }
@@ -169,18 +169,60 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         }
         
         //セグエを使って次の画面へ移動するとき
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            
+//            //次の画面をインスタンス化(as:ダウンキャスト型変換)
+//            var dvc = segue.destination as! DetailViewController
+//            
+//            
+//            //次の画面のプロパティに選択された行番号を指定
+//            dvc.sIndex = selectedIndex
+//            
+//        }
+//        
+        //削除機能
+//        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//            
+//            if editingStyle == .delete {
+//                // 削除したいデータのみをfetchする
+//                // 削除したいデータのcategoryとnameを取得
+//                let deletedCategory = [indexPath.section]
+//                let deletedName = tasksToShow[deletedCategory]?[indexPath.row]
+//                // 先ほど取得したcategoryとnameに合致するデータのみをfetchするようにfetchRequestを作成
+//                let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+//                fetchRequest.predicate = NSPredicate(format: "name = %@ and category = %@", deletedName!, deletedCategory)
+//                // そのfetchRequestを満たすデータをfetchしてtask（配列だが要素を1種類しか持たない）に代入し、削除する
+//                do {
+//                    let task = try context.fetch(fetchRequest)
+//                    context.delete(task[0])
+//                } catch {
+//                    print("Fetching Failed.")
+//                }
+//                
+//                // 削除したあとのデータを保存する
+//                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                
+//                // 削除後の全データをfetchする
+//                getData()
+//            }
+//            // taskTableViewを再読み込みする
+//            taskTableView.reloadData()
+//        }
+
+    
+        //セグエを使って次の画面へ移動するとき
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
             //次の画面をインスタンス化(as:ダウンキャスト型変換)
             var dvc = segue.destination as! DetailViewController
             
             
+            
             //次の画面のプロパティに選択された行番号を指定
             dvc.sIndex = selectedIndex
             
         }
-
-    
     
     
 

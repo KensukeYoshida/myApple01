@@ -109,7 +109,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Fwa-b7-rKl" id="Bd6-gP-pzn"/>
-                                    <outlet property="delegate" destination="Fwa-b7-rKl" id="nEB-JM-vez"/>
+                                    <outlet property="delegate" destination="Fwa-b7-rKl" id="GFa-kv-SZl"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -124,13 +124,13 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="tapBtn:" destination="Fwa-b7-rKl" eventType="touchUpInside" id="gkW-3P-Sjx"/>
-                                    <segue destination="c1r-BK-YFe" kind="show" id="n1n-Ik-eGa"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="savetitleTableView" destination="Ag1-Ff-Bs9" id="Pik-qE-dqt"/>
+                        <segue destination="c1r-BK-YFe" kind="show" identifier="showDetail" id="pCx-4O-bN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOK-7h-rzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lri-tS-q6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="-819"/>
+            <point key="canvasLocation" x="3137" y="-593"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="s8n-vL-RdV">
@@ -731,9 +731,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Fwa-b7-rKl" kind="relationship" relationship="rootViewController" id="mho-Bs-OVz"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uex-eN-igI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -750,7 +747,6 @@
         <image name="reload.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pNO-XJ-edx"/>
-        <segue reference="n1n-Ik-eGa"/>
+        <segue reference="pCx-4O-bN3"/>
     </inferredMetricsTieBreakers>
 </document>
