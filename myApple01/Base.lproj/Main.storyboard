@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOK-7h-rzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685.625" y="-75"/>
+            <point key="canvasLocation" x="2683.125" y="-75"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -349,13 +349,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-ab-Z1h">
-                                <rect key="frame" x="0.0" y="199" width="320" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="シンセサイザー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-Lh-e3l">
                                 <rect key="frame" x="113" y="117" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -374,9 +367,16 @@
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="tapSave:" destination="c1r-BK-YFe" eventType="touchUpInside" id="x0z-EC-YDh"/>
-                                    <segue destination="Fwa-b7-rKl" kind="show" id="pNO-XJ-edx"/>
+                                    <segue destination="dU5-Lq-37b" kind="show" id="pNO-XJ-edx"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-ab-Z1h">
+                                <rect key="frame" x="16" y="210" width="288" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lri-tS-q6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3137" y="-593"/>
+            <point key="canvasLocation" x="4134.375" y="-593.66197183098598"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="s8n-vL-RdV">
@@ -675,7 +675,7 @@
                         <segue destination="qeS-Ot-CGX" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="I2C-DO-fYd"/>
                         <segue destination="U2B-Cw-60n" kind="relationship" relationship="viewControllers" id="PdV-TQ-Fo4"/>
-                        <segue destination="f8g-Yi-hkf" kind="relationship" relationship="viewControllers" id="MKv-ch-U6F"/>
+                        <segue destination="dU5-Lq-37b" kind="relationship" relationship="viewControllers" id="3jJ-OG-SjZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -720,25 +720,27 @@
             </objects>
             <point key="canvasLocation" x="780" y="757.3943661971831"/>
         </scene>
-        <!--Idealist-->
-        <scene sceneID="Xjy-zD-63e">
+        <!--Item-->
+        <scene sceneID="nrR-in-4HU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8g-Yi-hkf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Idealist" image="Image" selectedImage="Image" id="rHW-H5-VHT"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dU5-Lq-37b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="TwZ-4V-cfm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmS-Hq-c9Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nhp-uH-Ek7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fwa-b7-rKl" kind="relationship" relationship="rootViewController" id="ieO-fM-WEA"/>
+                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uex-eN-igI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9c-PG-OZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="-75"/>
+            <point key="canvasLocation" x="1685.625" y="-75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="25" height="25"/>
         <image name="first" width="25" height="25"/>
         <image name="kakeru.png" width="100" height="100"/>
         <image name="memo.png" width="100" height="100"/>
@@ -747,6 +749,7 @@
         <image name="reload.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3jJ-OG-SjZ"/>
         <segue reference="pCx-4O-bN3"/>
     </inferredMetricsTieBreakers>
 </document>

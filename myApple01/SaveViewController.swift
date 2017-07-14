@@ -110,50 +110,8 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         }catch{
             //エラーが起きた時に通常処理の代わりに行う処理を記述(例外処理を記述する場所)
         }
-        
-        
-        func read(){
-            //AppDelegateを使う用意しておく
-            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            
-            //エンティティを操作するためのオブジェクトを作成
-            let viewContext = appDelegate.persistentContainer.viewContext
-            
-            //どのエンティティからデータを取得してくるか設定
-            let query : NSFetchRequest<Ideas> = Ideas.fetchRequest()
-            
-            //エラーが起きやすく、例外処理を書く必要がありそうな処理はdoで囲んでおく必要がある
-            //例)CoreDataのようなDB処理、インターネット接続
-            do{
-                //データを取得
-                let fetchResults = try viewContext.fetch(query)
-                
-                //ループで一行ずつ表示
-                for result:AnyObject in fetchResults{
-                    let title: String = result.value(forKey:"title2") as! String
-                    
-                    let saveDate: Date = result.value(forKey:"saveDate") as! Date
-                    
-                    print("title2:\(title) saveDate:\(saveDate)")
-                    
-                    words.append(title)
-                }
-                
-                
-                
-            }catch{
-                //エラーが起きた時に通常処理の代わりに行う処理を記述(例外処理を記述する場所)
-            }
-            
-
-        //データを一括取得
-        
-        //ループで一行ずつ表示
-        
-        
-        
     }
-
+    
 
         //セルが選択（タップされた）時発動
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -212,7 +170,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     
         //セグエを使って次の画面へ移動するとき
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
             //次の画面をインスタンス化(as:ダウンキャスト型変換)
             var dvc = segue.destination as! DetailViewController
@@ -226,7 +184,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     
 
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -243,4 +201,4 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     */
 
 }
-}
+
