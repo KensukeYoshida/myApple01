@@ -6,6 +6,7 @@
 //  Copyright © 2017年 kensuke yoshida. All rights reserved.
 //
 
+
 import UIKit
 import CoreData
 
@@ -17,7 +18,14 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     var words = [""]
     var words2 = [""]
     var words3 = [""]
+    var time = [""]
     
+    let df = DateFormatter()
+    
+    let now = Date()
+
+    
+        
     //選択された行番号(メンバ変数)
     var selectedIndex = -1 //全く選択されない時は-1が入っている
     
@@ -43,7 +51,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         cell.myLabel1.text = words[indexPath.row]
         cell.myLabel2.text = words2[indexPath.row]
         cell.myLabel3.text = words3[indexPath.row]
-        cell.saveDateLabel.text = "表示したい日付"
+        cell.saveDateLabel.text = time[indexPath.row]
         
         return cell
         
@@ -97,11 +105,20 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 
                 let saveDate: Date = result.value(forKey:"saveDate") as! Date
                 
-                print("title1:\(title) saveDate:\(saveDate)")
+                print("title1:\(title) title2:\(title) saveDate:\(saveDate)")
+                
+                df.dateFormat = "yyyy/MM/dd/HH/mm/ss"
+                df.timeZone = TimeZone.ReferenceType.local
+
+//                df.string(from: saveDate)/
                 
                 words.append(title)
                 words2.append(title2)
                 words3.append(title3)
+                time.append(df.string(from: saveDate))
+                
+               
+                
 
             }
             
@@ -118,11 +135,11 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             
             //print("選択されたデータ:\(tea_list[indexPath.row])")
             
-            //選択された行番号をメンバ変数に格納
+//            選択された行番号をメンバ変数に格納
             selectedIndex = indexPath.row
             
             //セグエを指定して画面移動
-            performSegue(withIdentifier: "showDetail", sender: nil)
+            performSegue(withIdentifier: "showDetail", sender: indexPath.row)
             
         }
         
@@ -172,7 +189,18 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         //セグエを使って次の画面へ移動するとき
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
-            //次の画面をインスタンス化(as:ダウンキャスト型変換)
+            //memo
+            if(segue.identifier == "showDetail"){
+             let guest = segue.destination as! DetailViewController
+                
+//                guest.words = words[sender! as! Int] as! String
+//                guest.memo = memo[sender! as! Int ] as! String
+//                guest.myLabel3 = words3[sender! as! Int ] as! String
+                
+            }
+            
+            
+            //次の画面をインスタンス化(as:ダウンキャスト型変換) dvc（detail view controller）として次の画面を扱う
             var dvc = segue.destination as! DetailViewController
             
             

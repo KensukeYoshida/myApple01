@@ -10,6 +10,7 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
+    @IBOutlet weak var saveDateLabel: UILabel!
     
     @IBOutlet weak var myLabel1: UILabel!
     
@@ -17,7 +18,9 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var myLabel3: UILabel!
 
-    @IBOutlet weak var saveDateLabel: UILabel!
+    var words = [""]
+    var words2 = [""]
+    var words3 = [""]
     
 
     override func awakeFromNib() {

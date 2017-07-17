@@ -23,12 +23,25 @@ class DetailViewController: UIViewController {
     //メンバ変数
     var words = ["myLabel1.text = appDelegate.selectedWord1", "myLabel2.text = appDelegate.selectedWord2","myLabel3.text = appDelegate.selectedWord3"]
     
+    var title1 = [""]
+    var title2 = [""]
+    var title3 = [""]
+    
     var memo = [""]
     
+    
+    //ただの数字　sIndexに代入 タップされた行が代入される
     var sIndex = -1
+    
+    let df = DateFormatter()
+    
+    let now = Date()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -41,6 +54,32 @@ class DetailViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+        
+        //エンティティを操作するためのオブジェクトを作成
+        let viewContext = appDelegate.persistentContainer.viewContext
+        
+        let query:NSFetchRequest<Ideas> = Ideas.fetchRequest()
+        
+        do{
+            //データを取得
+            let fetchResults = try viewContext.fetch(query)
+            
+            var n = 1
+            
+            //ループで一行ずつ表示 for 〇〇として in 〇〇を　扱う
+            for result:AnyObject in fetchResults{
+                let content: String = result.value(forKey:"memo") as! String
+                
+            //nはCoreDateの行数
+                if n == sIndex {
+                myTextView.text = content
+                }
+                n += 1
+                
+            }
+        }catch{
+        
+        }
         
         
     }
@@ -70,21 +109,33 @@ class DetailViewController: UIViewController {
         
         newRecord.setValue(myTextView.text, forKey: "memo")//値の代入
         
+        //Date型から文字列型に変更する
+        df.dateFormat = "yyyy/MM/dd"
+        df.timeZone = TimeZone.ReferenceType.local
+
+        let tapDate = df.string(from: now)
         
         newRecord.setValue(Date(),forKey: "saveDate")
         //Date():現在日時がセットできる
         
+        
+        
         words.append(myLabel1.text!)
         memo.append(myTextView.text!)
+        
+        print (df.string(from: now))
         
         //レコード（行）の即時保存
         do{
             try viewContext.save()
         }catch{
         }
+        //read()
+        //savetitleTableView.reloadData()
+    
+        
         
     }
-    
     
     
     
@@ -99,11 +150,22 @@ class DetailViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        */
+    @IBAction func leftSwiped() {
+        NSLog("leftSwiped");
     }
-    */
+    
+    @IBAction func rightSwiped() {
+        NSLog("rightSwiped");
+    }
+    
+    @IBAction func upSwiped() {
+        NSLog("upSwiped");
+    }
+    
+    @IBAction func downSwiped() {
+        NSLog("downSwiped");
+    }
+    
 
 }

@@ -40,6 +40,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
         
     }
     
+    
     @IBAction func tapReturn(_ sender: UITextField) {
         
         // XML解析実行
@@ -70,6 +71,24 @@ class SearchViewController: UIViewController,XMLParserDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func leftSwiped() {
+        NSLog("leftSwiped");
+    }
+    
+    @IBAction func rightSwiped() {
+        NSLog("rightSwiped");
+    }
+    
+    @IBAction func upSwiped() {
+        NSLog("upSwiped");
+    }
+    
+    @IBAction func downSwiped() {
+        NSLog("downSwiped");
+    }
+    
     
     func loadxml(){
     
