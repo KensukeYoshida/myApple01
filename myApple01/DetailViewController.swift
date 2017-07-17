@@ -58,25 +58,41 @@ class DetailViewController: UIViewController {
         //エンティティを操作するためのオブジェクトを作成
         let viewContext = appDelegate.persistentContainer.viewContext
         
+        //どのエンティティからdataを取得してくるか設定
         let query:NSFetchRequest<Ideas> = Ideas.fetchRequest()
         
         do{
-            //データを取得
+            //データを一括取得
             let fetchResults = try viewContext.fetch(query)
             
+            //nはcoredataの行数　sIndexはタップされた行数
             var n = 1
             
             //ループで一行ずつ表示 for 〇〇として in 〇〇を　扱う
             for result:AnyObject in fetchResults{
-                let content: String = result.value(forKey:"memo") as! String
+                let content: String? = result.value(forKey:"memo") as? String
+                let title1: String? = result.value(forKey:"title1") as? String
+                let title2: String? = result.value(forKey:"title2") as? String
+                let title3: String? = result.value(forKey:"title3") as? String
+                
+
+                
+
                 
             //nはCoreDateの行数
                 if n == sIndex {
                 myTextView.text = content
+                myLabel1.text = title1
+                myLabel2.text = title2
+                myLabel3.text = title3
                 }
+                //Index.rowと同じ　n+=1は周目
                 n += 1
                 
             }
+            
+
+            
         }catch{
         
         }

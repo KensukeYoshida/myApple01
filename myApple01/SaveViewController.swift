@@ -189,7 +189,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         //セグエを使って次の画面へ移動するとき
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
-            //memo
+            //memoを
             if(segue.identifier == "showDetail"){
              let guest = segue.destination as! DetailViewController
                 

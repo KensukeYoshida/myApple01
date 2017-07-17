@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myApple01/DetailViewController.swift"
-            timestampString = "521989272.510262"
+            timestampString = "521996512.995119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "tapSave(_:)"
             landmarkType = "7">
          </BreakpointContent>
