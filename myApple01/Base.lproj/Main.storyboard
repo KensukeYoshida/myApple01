@@ -422,7 +422,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="検索"/>
                                 <connections>
-                                    <action selector="tapResearchBtn:" destination="9mO-nw-EHE" eventType="touchUpInside" id="k6S-4O-af9"/>
+                                    <action selector="tapResearchBrn:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="AfE-cA-o8o"/>
+                                    <action selector="tapResearchBtn:" destination="9mO-nw-EHE" eventType="touchUpInside" id="BP9-6L-8a4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="検索結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-GW-u1o">
@@ -439,6 +440,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField1:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="t4W-M7-Ra3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-LH-UNC">
                                 <rect key="frame" x="16" y="210" width="242" height="30"/>
@@ -447,6 +451,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField2:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="8gB-fk-dic"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tg-Dw-kfn">
                                 <rect key="frame" x="16" y="248" width="242" height="30"/>
@@ -455,6 +462,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField3:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="0nA-At-69q"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvl-NJ-gN5">
                                 <rect key="frame" x="16" y="286" width="242" height="30"/>
@@ -463,6 +473,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField4:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="aQI-sa-zvf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aca-je-0YK">
                                 <rect key="frame" x="16" y="324" width="242" height="30"/>
@@ -471,6 +484,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField5:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="sSo-72-Ely"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-NE-7nG">
                                 <rect key="frame" x="16" y="359" width="242" height="30"/>
@@ -479,6 +495,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField6:" destination="9mO-nw-EHE" eventType="editingDidEnd" id="6xR-wu-Ia6"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IYj-sb-aI7">
                                 <rect key="frame" x="16" y="397" width="242" height="30"/>
@@ -487,6 +506,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField7:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="DfW-rc-7IH"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEw-KT-vzF">
                                 <rect key="frame" x="16" y="435" width="242" height="30"/>
@@ -495,6 +517,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField8:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="TmD-ih-h3T"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-Xu-9YS">
                                 <rect key="frame" x="16" y="473" width="242" height="30"/>
@@ -503,6 +528,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField9:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="dVD-g3-l0u"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-Ml-2JF">
                                 <rect key="frame" x="16" y="511" width="242" height="30"/>
@@ -511,11 +539,17 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField10:" destination="9mO-nw-EHE" eventType="editingDidEnd" id="lLe-Vy-HfE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKR-jP-luR">
                                 <rect key="frame" x="266" y="172" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn1:" destination="9mO-nw-EHE" eventType="touchUpInside" id="YCP-XN-oVk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We4-kR-pjB">
                                 <rect key="frame" x="266" y="209" width="31" height="30"/>
@@ -569,7 +603,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="tapReturn:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="ypk-l2-96P"/>
+                                    <action selector="tapReturn:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="NPw-1G-f9p"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -577,6 +611,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BKF-td-mAF"/>
                     <connections>
+                        <outlet property="myTxtField1" destination="Z83-6L-d4j" id="IgW-OC-Es5"/>
                         <outlet property="myTxtField10" destination="gv8-Ml-2JF" id="ltQ-Zq-Jpr"/>
                         <outlet property="myTxtField2" destination="gjQ-LH-UNC" id="OSc-CR-gAO"/>
                         <outlet property="myTxtField3" destination="2tg-Dw-kfn" id="Ubd-h9-yDl"/>
@@ -693,7 +728,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="tapReturn:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="W1b-58-Cy1"/>
+                                    <action selector="tapReturn:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="1uh-qI-X0M"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-wv-EGK">

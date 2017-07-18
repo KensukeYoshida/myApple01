@@ -126,7 +126,7 @@ class DetailViewController: UIViewController {
         newRecord.setValue(myTextView.text, forKey: "memo")//値の代入
         
         //Date型から文字列型に変更する
-        df.dateFormat = "yyyy/MM/dd"
+        df.dateFormat = "yyyy/MM/dd hh:mm"
         df.timeZone = TimeZone.ReferenceType.local
 
         let tapDate = df.string(from: now)
@@ -162,26 +162,4 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-        */
-    @IBAction func leftSwiped() {
-        NSLog("leftSwiped");
-    }
-    
-    @IBAction func rightSwiped() {
-        NSLog("rightSwiped");
-    }
-    
-    @IBAction func upSwiped() {
-        NSLog("upSwiped");
-    }
-    
-    @IBAction func downSwiped() {
-        NSLog("downSwiped");
-    }
-    
-
 }

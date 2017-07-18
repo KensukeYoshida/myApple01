@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController,XMLParserDelegate {
     
@@ -35,22 +36,25 @@ class SearchViewController: UIViewController,XMLParserDelegate {
 
     @IBOutlet weak var txtSearchword: UITextField!
     
+    var words = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     
+    
+    
     @IBAction func tapReturn(_ sender: UITextField) {
         
-        // XML解析実行
-        //一旦1にリセット
         myCount = 1
         
         loadxml()
 
-        
     }
+    
+
    
     
     @IBAction func tapResearchBtn(_ sender: UIButton) {
@@ -61,9 +65,96 @@ class SearchViewController: UIViewController,XMLParserDelegate {
         
         loadxml()
         
-
-        
     }
+    
+    
+
+    
+    @IBAction func myTxtField1(_ sender: UITextField) {
+    }
+    
+    @IBAction func myTxtField2(_ sender: UITextField) {
+    }
+    
+
+    @IBAction func myTxtField3(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField4(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField5(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField6(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField7(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField8(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField9(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func myTxtField10(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func tapAddBtn1(_ sender: UIButton) {
+        
+        var checkFlag = false
+        
+        //Words:存在チェック
+        for word:String in words{
+            if myTxtField1.text == word {
+                checkFlag = true
+            }
+            
+        }
+        
+        
+        if checkFlag == false{
+            
+            //AppDelegateのインスタンスを用意しておく (as!はダウンキャスト ＜値＞as!＜型＞)
+            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            //エンティティを操作するためのオブジェクトを作成
+            let viewContext = appDelegate.persistentContainer.viewContext
+            
+            //Wordsエンティティオブジェクトを作成
+            let Words = NSEntityDescription.entity(forEntityName: "Words", in: viewContext)
+            
+            //Wordsエンティティにレコード(行)を挿入するためのオブジェクトを作成
+            let newRecord = NSManagedObject(entity: Words!, insertInto: viewContext)
+            //③上記まで
+            
+            
+            //追加したいdata(txtTitleに入力された文字)のセット
+            newRecord.setValue(myTxtField1.text, forKey: "title")//値の代入
+            newRecord.setValue(Date(),forKey: "saveDate")
+            //Date():現在日時がセットできる
+            
+            //レコード（行）の即時保存
+            do{
+                try viewContext.save()
+            }catch{
+            }
+            
+        }
+        
+
+    }
+    
+    
     
     
     

@@ -25,6 +25,7 @@ class SecondViewController: UIViewController{
     @IBAction func tapReturn(_ sender: UITextField) {
     }
     
+    
     //すでに存在するデータの読込処理
     func read(){
         //AppDelegateを使う用意しておく

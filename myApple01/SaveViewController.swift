@@ -107,7 +107,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 
                 print("title1:\(title) title2:\(title) saveDate:\(saveDate)")
                 
-                df.dateFormat = "yyyy/MM/dd/HH/mm/ss"
+                df.dateFormat = "yyyy/MM/dd/ HH:mm"
                 df.timeZone = TimeZone.ReferenceType.local
 
 //                df.string(from: saveDate)/
@@ -142,6 +142,34 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             performSegue(withIdentifier: "showDetail", sender: indexPath.row)
             
         }
+    
+    // スワイプ削除
+    func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "削除"
+    }
+    
+    // 削除処理
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            
+            // これはRealmSwiftでデータを削除しているケース
+            let deleteHistory = self.time[indexPath.row]
+
+            
+            // TableViewを再読み込み.
+            //self.table.reloadData()
+            
+            
+        }
+    }
+
+
         
         //セグエを使って次の画面へ移動するとき
 //        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -185,6 +213,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
 //            taskTableView.reloadData()
 //        }
 
+    
     
         //セグエを使って次の画面へ移動するとき
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
