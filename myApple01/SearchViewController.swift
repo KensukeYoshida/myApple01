@@ -108,9 +108,70 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     @IBAction func myTxtField10(_ sender: UITextField) {
     }
     
-    
     @IBAction func tapAddBtn1(_ sender: UIButton) {
         
+     addword(addtext: myTxtField1.text!)
+
+    }
+   
+    @IBAction func tapAddBtn2(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField2.text!)
+
+    }
+    
+    
+    @IBAction func tapAddBtn3(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField3.text!)
+        
+    }
+    
+    
+    @IBAction func tapAddBtn4(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField4.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn5(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField5.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn6(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField6.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn7(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField7.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn8(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField8.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn9(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField9.text!)
+    }
+    
+    
+    @IBAction func tapAddBtn10(_ sender: UIButton) {
+        
+        addword(addtext: myTxtField10.text!)
+    }
+    
+    
+    
+    func addword(addtext:String){
         var checkFlag = false
         
         //Words:存在チェック
@@ -139,7 +200,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
             
             
             //追加したいdata(txtTitleに入力された文字)のセット
-            newRecord.setValue(myTxtField1.text, forKey: "title")//値の代入
+            newRecord.setValue(addtext, forKey: "title")//値の代入
             newRecord.setValue(Date(),forKey: "saveDate")
             //Date():現在日時がセットできる
             
@@ -148,14 +209,8 @@ class SearchViewController: UIViewController,XMLParserDelegate {
                 try viewContext.save()
             }catch{
             }
-            
         }
-        
-
-    }
-    
-    
-    
+}
     
     
     override func didReceiveMemoryWarning() {
@@ -163,22 +218,6 @@ class SearchViewController: UIViewController,XMLParserDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func leftSwiped() {
-        NSLog("leftSwiped");
-    }
-    
-    @IBAction func rightSwiped() {
-        NSLog("rightSwiped");
-    }
-    
-    @IBAction func upSwiped() {
-        NSLog("upSwiped");
-    }
-    
-    @IBAction func downSwiped() {
-        NSLog("downSwiped");
-    }
     
     
     func loadxml(){

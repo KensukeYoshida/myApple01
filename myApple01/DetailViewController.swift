@@ -139,7 +139,7 @@ class DetailViewController: UIViewController {
         words.append(myLabel1.text!)
         memo.append(myTextView.text!)
         
-        print (df.string(from: now))
+        print(df.string(from: now))
         
         //レコード（行）の即時保存
         do{

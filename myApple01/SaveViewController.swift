@@ -193,8 +193,8 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
 //                let deletedCategory = [indexPath.section]
 //                let deletedName = tasksToShow[deletedCategory]?[indexPath.row]
 //                // 先ほど取得したcategoryとnameに合致するデータのみをfetchするようにfetchRequestを作成
-//                let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-//                fetchRequest.predicate = NSPredicate(format: "name = %@ and category = %@", deletedName!, deletedCategory)
+//                let fetchRequest: NSFetchRequest<Ideas> = Task.fetchRequest()
+//                fetchRequest.predicate = NSPredicate(format: "title = %@ and category = %@", deletedName!, deletedCategory)
 //                // そのfetchRequestを満たすデータをfetchしてtask（配列だが要素を1種類しか持たない）に代入し、削除する
 //                do {
 //                    let task = try context.fetch(fetchRequest)

@@ -22,6 +22,7 @@ class SecondViewController: UIViewController{
     }
     
     
+    
     @IBAction func tapReturn(_ sender: UITextField) {
     }
     
@@ -52,6 +53,7 @@ class SecondViewController: UIViewController{
 
     
     //OKボタン押された時、CoreDate追加
+   
     @IBAction func tapSave(_ sender: UIButton) {
         
         var checkFlag = false
