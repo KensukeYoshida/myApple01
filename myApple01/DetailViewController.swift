@@ -66,7 +66,7 @@ class DetailViewController: UIViewController {
             let fetchResults = try viewContext.fetch(query)
             
             //nはcoredataの行数　sIndexはタップされた行数
-            var n = 1
+            var n = 0
             
             //ループで一行ずつ表示 for 〇〇として in 〇〇を　扱う
             for result:AnyObject in fetchResults{

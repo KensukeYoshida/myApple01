@@ -105,12 +105,12 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         if(self.savetitleTableView.isEditing == true)
         {
             self.savetitleTableView.isEditing = false
-            self.navigationItem.rightBarButtonItem?.title = "Done"
+            self.navigationItem.rightBarButtonItem?.title = "完了"
         }
         else
         {
             self.savetitleTableView.isEditing = true
-            self.navigationItem.rightBarButtonItem?.title = "Edit"
+            self.navigationItem.rightBarButtonItem?.title = "削除"
         }
     }
 
@@ -172,7 +172,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
 
-        //セルが選択（タップされた）時発動
+//        //セルが選択（タップされた）時発動
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             //print("選択されたデータ:\(tea_list[indexPath.row])")
