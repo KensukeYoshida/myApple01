@@ -9,7 +9,11 @@
 import UIKit
 import CoreData
 
-class SearchViewController: UIViewController,XMLParserDelegate {
+class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelegate {
+    
+    
+    
+    
     
     
     @IBOutlet weak var myTxtField1: UITextField!

@@ -95,6 +95,17 @@ class SecondViewController: UIViewController{
             }
         
         }
+        //部品のアラートを作る
+        let alertController = UIAlertController(title: "単語追加完了", message: "", preferredStyle: .alert)
+        
+        
+        //アラートにOKボタンを追加
+        //handler:OKボタンが押された時に行いたい処理を指定する場所
+        alertController.addAction(UIAlertAction(title:"OK", style: .default, handler: nil))
+        
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
         
     }
     

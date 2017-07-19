@@ -71,23 +71,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjQ-aq-1ac">
-                                                    <rect key="frame" x="0.0" y="14" width="97" height="21"/>
+                                                    <rect key="frame" x="0.0" y="11" width="97" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-ml-VAD">
-                                                    <rect key="frame" x="111" y="13" width="102" height="21"/>
+                                                    <rect key="frame" x="109" y="10" width="102" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5d-0P-5Ze">
-                                                    <rect key="frame" x="221" y="10" width="99" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -95,6 +88,13 @@
                                                     <rect key="frame" x="155" y="42" width="165" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5d-0P-5Ze">
+                                                    <rect key="frame" x="221" y="10" width="99" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -118,8 +118,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="jCM-6k-7Pc">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="H4o-Bu-rfZ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="rightButton" destination="H4o-Bu-rfZ" id="10h-eY-1gW"/>
                         <outlet property="savetitleTableView" destination="Ag1-Ff-Bs9" id="Pik-qE-dqt"/>
                         <segue destination="c1r-BK-YFe" kind="show" identifier="showDetail" id="pCx-4O-bN3"/>
                     </connections>
@@ -358,7 +360,7 @@
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="tapSave:" destination="c1r-BK-YFe" eventType="touchUpInside" id="x0z-EC-YDh"/>
-                                    <segue destination="Fwa-b7-rKl" kind="show" id="vXw-2G-IaV"/>
+                                    <segue destination="Fwa-b7-rKl" kind="show" id="6CK-mr-dEi"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-ab-Z1h">
@@ -791,7 +793,7 @@
             </objects>
             <point key="canvasLocation" x="2814.375" y="756.33802816901414"/>
         </scene>
-        <!--AddWord-->
+        <!--追加-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="myApple01" customModuleProvider="target" sceneMemberID="viewController">
@@ -831,7 +833,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AddWord" image="plus" selectedImage="plus" id="kAn-py-0r5"/>
+                    <tabBarItem key="tabBarItem" title="追加" image="plus" selectedImage="plus" id="kAn-py-0r5"/>
                     <navigationItem key="navigationItem" id="XO9-vp-Jrs"/>
                     <connections>
                         <outlet property="txtTitle" destination="x6c-bH-8bE" id="jWc-lR-nHn"/>
@@ -862,11 +864,11 @@
             </objects>
             <point key="canvasLocation" x="-872" y="-42"/>
         </scene>
-        <!--First-->
+        <!--掛ける-->
         <scene sceneID="Nfl-Bg-NFr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qeS-Ot-CGX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="掛ける" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rDv-rq-8iV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -900,11 +902,11 @@
             </objects>
             <point key="canvasLocation" x="780" y="757.3943661971831"/>
         </scene>
-        <!--Item-->
+        <!--一覧-->
         <scene sceneID="nrR-in-4HU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dU5-Lq-37b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TwZ-4V-cfm"/>
+                    <tabBarItem key="tabBarItem" title="一覧" id="TwZ-4V-cfm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nhp-uH-Ek7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -929,7 +931,7 @@
         <image name="reload.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vXw-2G-IaV"/>
         <segue reference="pCx-4O-bN3"/>
+        <segue reference="ieO-fM-WEA"/>
     </inferredMetricsTieBreakers>
 </document>

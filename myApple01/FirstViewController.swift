@@ -71,17 +71,38 @@ class FirstViewController: UIViewController {
             var r = Int(arc4random()) % n
             var s = Int(arc4random()) % n
             
-            if r == n {
+            if r > 0 {
                 if s == r {
                     s -= 1
+                }
+            }else{
+                if s == r {
+                 s += 1
                 }
             }
             
             var t = Int(arc4random()) % n
-            if t == r || t == s {
-                t -= 1
+            
+            if t > 0 {
+                if t == r {
+                    t -= 1
+                }
+            }else{
+                if t == r {
+                    t += 1
+                }
             }
             
+            if t > 0 {
+                if t == s {
+                    t -= 1
+                }
+            }else{
+                if t == s{
+                    t += 1
+                }
+            }
+
            
             
             //ループで一行ずつ表示

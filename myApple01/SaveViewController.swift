@@ -25,6 +25,10 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let now = Date()
 
     
+    @IBOutlet weak var rightButton: UIBarButtonItem!
+    
+    
+
         
     //選択された行番号(メンバ変数)
     var selectedIndex = -1 //全く選択されない時は-1が入っている
@@ -56,6 +60,8 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return cell
         
     }
+    
+    
 
     //ボタン押したときの処理
     @IBAction func tapBtn(_ sender: UIButton) {
@@ -67,14 +73,36 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
 
     }
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var rigtButton = UIBarButtonItem(title:"Edit", style:UIBarButtonItemStyle.plain, target: self, action: Selector(("showEditing:")))
+        
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+//        func showEditing(sender: UIBarButtonItem)
+//        {
+//            if(self.tableView.editing == true)
+//            {
+//                self.tableView.editing = false
+//                self.navigationItem.rightBarButtonItem?.title = "Done"
+//            }
+//            else
+//            {
+//                self.tableView.editing = true
+//                self.navigationItem.rightBarButtonItem?.title = "Edit"
+//            }
+//        }
+
 
         //CoreDataからdataを読込処理
         read()
         
     }
+    
+  
     
     //④すでに存在するデータの読込処理
     func read(){
