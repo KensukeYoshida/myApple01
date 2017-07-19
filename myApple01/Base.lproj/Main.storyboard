@@ -118,14 +118,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="jCM-6k-7Pc">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="編集" id="H4o-Bu-rfZ">
-                            <connections>
-                                <action selector="showEditingWithSender:" destination="Fwa-b7-rKl" id="cOX-3c-TJt"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="rightButton" destination="H4o-Bu-rfZ" id="10h-eY-1gW"/>
                         <outlet property="savetitleTableView" destination="Ag1-Ff-Bs9" id="Pik-qE-dqt"/>
                         <segue destination="c1r-BK-YFe" kind="show" identifier="showDetail" id="pCx-4O-bN3"/>
                     </connections>
@@ -410,8 +404,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-Ww-eyK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="601"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="535"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-yk-KnX">
                                                 <rect key="frame" x="281" y="38" width="31" height="30"/>
@@ -910,7 +904,7 @@
         <scene sceneID="nrR-in-4HU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dU5-Lq-37b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="一覧" id="TwZ-4V-cfm"/>
+                    <tabBarItem key="tabBarItem" title="一覧" image="一覧" id="TwZ-4V-cfm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nhp-uH-Ek7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -933,6 +927,7 @@
         <image name="open_key_ios.png" width="500" height="500"/>
         <image name="plus" width="25" height="25"/>
         <image name="reload.png" width="500" height="500"/>
+        <image name="一覧" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ieO-fM-WEA"/>

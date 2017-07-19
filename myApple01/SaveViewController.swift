@@ -27,7 +27,8 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let now = Date()
 
     
-    @IBOutlet weak var rightButton: UIBarButtonItem!
+    //右上ボタンで編集・削除
+    //@IBOutlet weak var rightButton: UIBarButtonItem!
     
     
 
@@ -88,32 +89,33 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var rigtButton = UIBarButtonItem(title:"Edit", style:UIBarButtonItemStyle.plain, target: self, action: Selector(("showEditing:")))
-        
-        self.navigationItem.rightBarButtonItem = rightButton
 
+//  　右上ボタン押した時削除
+//        var rigtButton = UIBarButtonItem(title:"Edit", style:UIBarButtonItemStyle.plain, target: self, action: Selector(("showEditing:")))
+//        
+//        self.navigationItem.rightBarButtonItem = rightButton
+//
 
         //CoreDataからdataを読込処理
         read()
         
     }
     
-    
-    @IBAction func showEditing(sender: UIBarButtonItem)
-    {
-        if(self.savetitleTableView.isEditing == true)
-        {
-            self.savetitleTableView.isEditing = false
-            self.navigationItem.rightBarButtonItem?.title = "完了"
-        }
-        else
-        {
-            self.savetitleTableView.isEditing = true
-            self.navigationItem.rightBarButtonItem?.title = "削除"
-        }
-    }
-
+//　　右上のボタン押した時削除機能
+//    @IBAction func showEditing(sender: UIBarButtonItem)
+//    {
+//        if(self.savetitleTableView.isEditing == true)
+//        {
+//            self.savetitleTableView.isEditing = false
+//            self.navigationItem.rightBarButtonItem?.title = "編集"
+//        }
+//        else
+//        {
+//            self.savetitleTableView.isEditing = true
+//            self.navigationItem.rightBarButtonItem?.title = "削除"
+//        }
+//    }
+//
     
   
     
@@ -185,77 +187,6 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             
         }
     
-//    // スワイプ削除
-//    func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
-//    {
-//        return true
-//    }
-//    
-//    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-//        return "削除"
-//    }
-//    
-//    // 削除処理
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.delete {
-//            
-//            
-//            // これはRealmSwiftでデータを削除しているケース
-//            let deleteHistory = self.time[indexPath.row]
-//
-//            
-//            // TableViewを再読み込み.
-//            //self.table.reloadData()
-//            
-//            
-//        }
-//    }
-
-
-        
-        //セグエを使って次の画面へ移動するとき
-//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            
-//            //次の画面をインスタンス化(as:ダウンキャスト型変換)
-//            var dvc = segue.destination as! DetailViewController
-//            
-//            
-//            //次の画面のプロパティに選択された行番号を指定
-//            dvc.sIndex = selectedIndex
-//            
-//        }
-//        
-        //削除機能
-//        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//            
-//            if editingStyle == .delete {
-//                // 削除したいデータのみをfetchする
-//                // 削除したいデータのcategoryとnameを取得
-//                let deletedCategory = [indexPath.section]
-//                let deletedName = tasksToShow[deletedCategory]?[indexPath.row]
-//                // 先ほど取得したcategoryとnameに合致するデータのみをfetchするようにfetchRequestを作成
-//                let fetchRequest: NSFetchRequest<Ideas> = Task.fetchRequest()
-//                fetchRequest.predicate = NSPredicate(format: "title = %@ and category = %@", deletedName!, deletedCategory)
-//                // そのfetchRequestを満たすデータをfetchしてtask（配列だが要素を1種類しか持たない）に代入し、削除する
-//                do {
-//                    let task = try context.fetch(fetchRequest)
-//                    context.delete(task[0])
-//                } catch {
-//                    print("Fetching Failed.")
-//                }
-//                
-//                // 削除したあとのデータを保存する
-//                (UIApplication.shared.delegate as! AppDelegate).saveContext()
-//                
-//                // 削除後の全データをfetchする
-//                getData()
-//            }
-//            // taskTableViewを再読み込みする
-//            taskTableView.reloadData()
-//        }
-
-    
     
         //セグエを使って次の画面へ移動するとき
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -264,9 +195,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             if(segue.identifier == "showDetail"){
              let guest = segue.destination as! DetailViewController
                 
-//                guest.words = words[sender! as! Int] as! String
-//                guest.memo = memo[sender! as! Int ] as! String
-//                guest.myLabel3 = words3[sender! as! Int ] as! String
+
                 
             }
             
@@ -309,16 +238,5 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
