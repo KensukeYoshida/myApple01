@@ -20,6 +20,8 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     var words3 = [""]
     var time = [""]
     
+    var wordsArray : [Ideas] = []
+    
     let df = DateFormatter()
     
     let now = Date()
@@ -36,7 +38,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     //行数は numberOfRowsは決まり
     //->Int :戻り値のデータ型はInt型ですという意味
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return words.count
+        return wordsArray.count
     }
     
     //表示するセルの中身
@@ -45,13 +47,34 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         //文字を表示するセルの取得(セルの再利用)
         //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
-        
+        let task = wordsArray[indexPath.row]
         //表示したい文字の設定
         //cell.textLabel?.text = "\(indexPath.row)"
         //cell.textLabel?.text = todo[indexPath.row]
         
         //文字色変更
         //cell.textLabel?.textColor = UIColor.brown
+        let task = foodArray[indexPath.row]
+        //        cell.photo?.photo =
+        cell.words?.text = task.value(forKey: "words")as!String
+        cell.words2?.text = task.value(forKey: "words2")as!String
+        cell.words3?.text = task.value(forKey: "words3")as!String
+        cell.saveDateLabel?.text = task.value(forKey: "saveDateL")as!String
+        
+        //保存方法表記
+        var saveindex = task.value(forKey: "savetype")as!Int
+        
+        switch saveindex {
+        case 0:
+            cell.savetype.text = "冷蔵"
+        case 1:
+            cell.savetype.text = "冷凍"
+        case 2:
+            cell.savetype.text = "室温"
+        default:
+            cell.savetype.text = "なし"
+        
+        
         cell.myLabel1.text = words[indexPath.row]
         cell.myLabel2.text = words2[indexPath.row]
         cell.myLabel3.text = words3[indexPath.row]
@@ -81,26 +104,28 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         var rigtButton = UIBarButtonItem(title:"Edit", style:UIBarButtonItemStyle.plain, target: self, action: Selector(("showEditing:")))
         
         self.navigationItem.rightBarButtonItem = rightButton
-        
-//        func showEditing(sender: UIBarButtonItem)
-//        {
-//            if(self.tableView.editing == true)
-//            {
-//                self.tableView.editing = false
-//                self.navigationItem.rightBarButtonItem?.title = "Done"
-//            }
-//            else
-//            {
-//                self.tableView.editing = true
-//                self.navigationItem.rightBarButtonItem?.title = "Edit"
-//            }
-//        }
 
 
         //CoreDataからdataを読込処理
         read()
         
     }
+    
+    
+    @IBAction func showEditing(sender: UIBarButtonItem)
+    {
+        if(self.savetitleTableView.isEditing == true)
+        {
+            self.savetitleTableView.isEditing = false
+            self.navigationItem.rightBarButtonItem?.title = "Done"
+        }
+        else
+        {
+            self.savetitleTableView.isEditing = true
+            self.navigationItem.rightBarButtonItem?.title = "Edit"
+        }
+    }
+
     
   
     
@@ -120,6 +145,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         do{
             //データを取得
             let fetchResults = try viewContext.fetch(query)
+            wordsArray = try viewContext.fetch(Ideas.fetchRequest())
             
             //ループで一行ずつ表示
             for result:AnyObject in fetchResults{
@@ -171,31 +197,31 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             
         }
     
-    // スワイプ削除
-    func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
-    {
-        return true
-    }
-    
-    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-        return "削除"
-    }
-    
-    // 削除処理
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            
-            
-            // これはRealmSwiftでデータを削除しているケース
-            let deleteHistory = self.time[indexPath.row]
-
-            
-            // TableViewを再読み込み.
-            //self.table.reloadData()
-            
-            
-        }
-    }
+//    // スワイプ削除
+//    func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+//    {
+//        return true
+//    }
+//    
+//    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+//        return "削除"
+//    }
+//    
+//    // 削除処理
+//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == UITableViewCellEditingStyle.delete {
+//            
+//            
+//            // これはRealmSwiftでデータを削除しているケース
+//            let deleteHistory = self.time[indexPath.row]
+//
+//            
+//            // TableViewを再読み込み.
+//            //self.table.reloadData()
+//            
+//            
+//        }
+//    }
 
 
         
@@ -266,6 +292,27 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
             dvc.sIndex = selectedIndex
             
         }
+    
+    //削除機能
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        
+        if editingStyle == .delete{
+            let task = wordsArray[indexPath.row]
+            context.delete(task)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            do {
+                wordsArray = try context.fetch(Ideas.fetchRequest())
+            }catch{
+                print("Fetching Failed")
+            }
+            
+            read()
+            
+        }
+        tableView.reloadData()
+    }
     
     
 
