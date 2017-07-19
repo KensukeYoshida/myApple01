@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedWord2:String = ""
     var selectedWord3:String = ""
     
+    var context : String = ""
+    
     //データの配列を用意
     var amount:NSArray = [""]
     

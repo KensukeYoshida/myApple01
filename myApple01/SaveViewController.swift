@@ -54,31 +54,19 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         //文字色変更
         //cell.textLabel?.textColor = UIColor.brown
-        let task = foodArray[indexPath.row]
-        //        cell.photo?.photo =
-        cell.words?.text = task.value(forKey: "words")as!String
-        cell.words2?.text = task.value(forKey: "words2")as!String
-        cell.words3?.text = task.value(forKey: "words3")as!String
-        cell.saveDateLabel?.text = task.value(forKey: "saveDateL")as!String
-        
-        //保存方法表記
-        var saveindex = task.value(forKey: "savetype")as!Int
-        
-        switch saveindex {
-        case 0:
-            cell.savetype.text = "冷蔵"
-        case 1:
-            cell.savetype.text = "冷凍"
-        case 2:
-            cell.savetype.text = "室温"
-        default:
-            cell.savetype.text = "なし"
+       
+       
+        cell.myLabel1?.text = task.value(forKey: "title1")as?String
+        cell.myLabel2?.text = task.value(forKey: "title2")as?String
+        cell.myLabel3?.text = task.value(forKey: "title3")as?String
+        cell.saveDateLabel?.text = task.value(forKey: "saveDate")as?String
         
         
-        cell.myLabel1.text = words[indexPath.row]
-        cell.myLabel2.text = words2[indexPath.row]
-        cell.myLabel3.text = words3[indexPath.row]
-        cell.saveDateLabel.text = time[indexPath.row]
+        
+//        cell.myLabel1.text = words[indexPath.row]
+//        cell.myLabel2.text = words2[indexPath.row]
+//        cell.myLabel3.text = words3[indexPath.row]
+//        cell.saveDateLabel.text = time[indexPath.row]
         
         return cell
         

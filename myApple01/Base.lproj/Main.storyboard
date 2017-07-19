@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-Ff-Bs9">
-                                <rect key="frame" x="0.0" y="64" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="447"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -118,7 +118,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="jCM-6k-7Pc">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="編集" id="H4o-Bu-rfZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="H4o-Bu-rfZ">
+                            <connections>
+                                <action selector="showEditingWithSender:" destination="Fwa-b7-rKl" id="cOX-3c-TJt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="rightButton" destination="H4o-Bu-rfZ" id="10h-eY-1gW"/>
@@ -931,7 +935,7 @@
         <image name="reload.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pCx-4O-bN3"/>
         <segue reference="ieO-fM-WEA"/>
+        <segue reference="pCx-4O-bN3"/>
     </inferredMetricsTieBreakers>
 </document>
