@@ -314,3 +314,103 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     }
     
 }
+
+//class ViewController: UiViewController, UITextFieldDelegate {
+//    
+//    // テーブルビュー
+//    var tableView: UITableView!
+//    
+//    // テキストフィールド
+//    var textField: UiTextField!
+//    
+//    // フォーカスの当たっているテキストフィールド
+//    var activeTextFiled: UiTextField!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//        
+//        tableView = UITableView(frame: CGRect(x:0, y:0, width:self.frame.width, height:self.frame.height))
+//        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+//        
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        
+//        self.view.addSubview(tableView)
+//    }
+//    
+//    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        let heightView = self.setHeaderView(tableView,isLayout: false) as! CGFloat
+//        return heightView
+//    }
+//    
+//    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let viewHeader = self.setHeaderView(tableView, isLayout: true) as! UIView
+//        return viewHeader
+//    }
+//    
+//    func setHeaderView(tableView: UITableView, isLayout: Bool) -> AnyObject {
+//        
+//        var heightView = 300
+//        
+//        let viewHeader = UIView()
+//        viewHeader.frame = CGRectMake(0, 0, tableView.frame.width, heightView)
+//        
+//        // widthをきめる
+//        var widthTextField: CGFloat = ・・・
+//        
+//        // heightをきめる
+//        var heightTextField: CGFloat = ・・・
+//        
+//        // frame.origin.xをきめる
+//        var xTextField: CGFloat = ・・・
+//        
+//        // frame.origin.yをきめる
+//        var yTextField CGFloat = ・・・
+//        
+//        textField = UiTextField()
+//        textField.frame = CGRectMake(xTextField, yTextField, widthTextField, heightTextField)
+//        
+//        // TextFieldデリゲート
+//        textField.delegate = self
+//        
+//        if isLayout {
+//            viewHeader.addSubview(textField)
+//        } else {
+//            return heightView
+//        }
+//    }
+//    
+//    // 以下、キーボードの制御
+//    override func viewWillAppear(animated: Bool) {
+//        let notificationCenter = NSNotificationCenter.defaultCenter()
+//        notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
+//        notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+//    }
+//    
+//    func handleKeyboardWillShowNotification(notification: NSNotification) {
+//        var userInfo = notification.userInfo!
+//        var keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+//        var boundSize: CGSize = UIScreen.mainScreen().bounds.size
+//        var textFieldLimit = activeTextFiled.frame.origin.y + activeTextFiled.frame.height + 8.0
+//        var keyboardLimit = boundSize.height - keyboardScreenEndFrame.size.height
+//        
+//        if textFieldLimit >= keyboardLimit {
+//            tableView.contentOffset.y = textFieldLimit - keyboardLimit
+//        }
+//    }
+//    
+//    func handleKeyboardWillHideNotification(notification: NSNotification) {
+//        tableView.contentOffset.y = 0
+//    }
+//    
+//    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+//        activeTextFiled = textField
+//        return true
+//    }
+//    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//}

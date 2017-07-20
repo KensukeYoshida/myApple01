@@ -398,14 +398,14 @@
                         <viewControllerLayoutGuide type="bottom" id="uIj-Ol-5bD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XrB-7t-afY" customClass="Sea">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-Ww-eyK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="601"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="795"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="671"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="731"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-yk-KnX">
                                                 <rect key="frame" x="281" y="38" width="31" height="30"/>
@@ -623,7 +623,7 @@
                                             <constraint firstItem="9j7-uH-w7b" firstAttribute="leading" secondItem="hlo-TG-ZOJ" secondAttribute="leading" constant="10" id="ALs-MK-Fhf"/>
                                             <constraint firstItem="gjQ-LH-UNC" firstAttribute="top" secondItem="VHN-y5-gX1" secondAttribute="top" id="CGW-Ee-8NQ"/>
                                             <constraint firstItem="gEw-KT-vzF" firstAttribute="top" secondItem="We4-kR-pjB" secondAttribute="top" id="Ebp-T1-wfW"/>
-                                            <constraint firstAttribute="bottom" secondItem="gv8-Ml-2JF" secondAttribute="bottom" constant="37" id="Ek3-05-BBD"/>
+                                            <constraint firstAttribute="bottom" secondItem="gv8-Ml-2JF" secondAttribute="bottom" constant="233" id="Ek3-05-BBD"/>
                                             <constraint firstItem="Uvl-NJ-gN5" firstAttribute="top" secondItem="b3Y-Lm-8ug" secondAttribute="top" id="Exe-RP-WfU"/>
                                             <constraint firstItem="Z83-6L-d4j" firstAttribute="top" secondItem="9I6-GW-u1o" secondAttribute="bottom" constant="8" symbolic="YES" id="Fe1-Lb-6fS"/>
                                             <constraint firstItem="GVW-3O-In9" firstAttribute="top" secondItem="9j7-uH-w7b" secondAttribute="bottom" constant="8" symbolic="YES" id="Fga-ee-lS7"/>
@@ -680,7 +680,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hlo-TG-ZOJ" secondAttribute="bottom" constant="2" id="0SW-DI-Kdr"/>
+                                    <constraint firstAttribute="bottom" secondItem="hlo-TG-ZOJ" secondAttribute="bottom" id="0SW-DI-Kdr"/>
                                     <constraint firstItem="hlo-TG-ZOJ" firstAttribute="top" secondItem="qJy-Ww-eyK" secondAttribute="top" constant="64" id="5g5-i2-GCF"/>
                                     <constraint firstItem="hlo-TG-ZOJ" firstAttribute="centerX" secondItem="qJy-Ww-eyK" secondAttribute="centerX" id="7Z5-Io-ctS"/>
                                     <constraint firstAttribute="trailing" secondItem="hlo-TG-ZOJ" secondAttribute="trailing" id="ZYb-Dd-7iu"/>
@@ -698,7 +698,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BKF-td-mAF"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="650"/>
+                    <size key="freeformSize" width="320" height="844"/>
                     <connections>
                         <outlet property="myTxtField1" destination="Z83-6L-d4j" id="IgW-OC-Es5"/>
                         <outlet property="myTxtField10" destination="gv8-Ml-2JF" id="ltQ-Zq-Jpr"/>

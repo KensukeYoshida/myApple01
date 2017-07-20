@@ -91,6 +91,7 @@ class SecondViewController: UIViewController{
             //レコード（行）の即時保存
             do{
                 try viewContext.save()
+                 words.append(txtTitle.text!)
             }catch{
             }
         
