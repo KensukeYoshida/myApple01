@@ -45,6 +45,7 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
     
     
@@ -174,13 +175,13 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     }
     
     
-    
+    //単語追加機能
     func addword(addtext:String){
         var checkFlag = false
         
         //Words:存在チェック
         for word:String in words{
-            if myTxtField1.text == word {
+            if addtext == word {
                 checkFlag = true
             }
             
@@ -225,7 +226,7 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     
     
     func loadxml(){
-    
+        
         //URLエンコードを行い、URLの一部を作成
         let encodedString = CFURLCreateStringByAddingPercentEscapes(
             nil,
@@ -269,7 +270,7 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
             case 2:
                 myTxtField2.text = attributeDict["data"]!
             case 3:
-               myTxtField3.text = attributeDict["data"]!
+                myTxtField3.text = attributeDict["data"]!
             case 4:
                 myTxtField4.text = attributeDict["data"]!
             case 5:
@@ -314,7 +315,6 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     }
     
 }
-
 //class ViewController: UiViewController, UITextFieldDelegate {
 //    
 //    // テーブルビュー

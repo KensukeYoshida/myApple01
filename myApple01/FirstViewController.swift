@@ -31,6 +31,7 @@ class FirstViewController: UIViewController {
     
     var lock3 = true
     
+    var words = [""]
     
 
 //    override func viewWillAppear(_ animated: Bool) {
@@ -176,6 +177,36 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //ユーザーデフォルトを用意する
+        let myDefault = UserDefaults.standard
+        
+        //データを読みだして
+        let myStr = myDefault.string(forKey: "FirstFlag")
+        
+        //文字列が入ってたらSecondViewControllerを表示（2回目以降）
+        if let tmpStr = myStr{
+            print ("二回目以降表示")
+            
+        }else{
+            // 文字が入ってなかったら初回起動時なので、FirstFlagに値を入れる
+            myDefault.set("ON", forKey: "FirstFlag")
+            myDefault.synchronize()
+            
+            //配列に用意している単語データをCoreDataに保存
+            var startwords = ["プログラミング","プログラミング", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","エンターテインメント","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書"]
+            
+            //Words:存在チェック
+            for word:String in startwords{
+             
+            addword(addtext: word)
+                
+            }
+                
+            
+
+        }
+        
+        
         //CoreDataからdataを読込
         read()
         
@@ -223,12 +254,49 @@ class FirstViewController: UIViewController {
     
     }
     
-    
-    
-    
-    
+    //単語追加機能
+    func addword(addtext:String){
+        var checkFlag = false
+        
+        //Words:存在チェック
+        for word:String in words{
+            if addtext == word {
+                checkFlag = true
+            }
+            
+        }
+        
+        
+        if checkFlag == false{
+            
+            //AppDelegateのインスタンスを用意しておく (as!はダウンキャスト ＜値＞as!＜型＞)
+            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            //エンティティを操作するためのオブジェクトを作成
+            let viewContext = appDelegate.persistentContainer.viewContext
+            
+            //Wordsエンティティオブジェクトを作成
+            let Words = NSEntityDescription.entity(forEntityName: "Words", in: viewContext)
+            
+            //Wordsエンティティにレコード(行)を挿入するためのオブジェクトを作成
+            let newRecord = NSManagedObject(entity: Words!, insertInto: viewContext)
+            //③上記まで
+            
+            
+            //追加したいdata(txtTitleに入力された文字)のセット
+            newRecord.setValue(addtext, forKey: "title")//値の代入
+            newRecord.setValue(Date(),forKey: "saveDate")
+            //Date():現在日時がセットできる
+            
+            //レコード（行）の即時保存
+            do{
+                try viewContext.save()
+            }catch{
+            }
+        }
+    }
 
-
+    
     
     //メモリ不足のとき表示
     override func didReceiveMemoryWarning() {
