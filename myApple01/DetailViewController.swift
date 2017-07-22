@@ -43,6 +43,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         
+        makeKeybord()
+        
+        
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         myLabel1.text = appDelegate.selectedWord1
@@ -98,6 +101,26 @@ class DetailViewController: UIViewController {
         }
         
         
+    }
+    
+    func makeKeybord(){
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(DetailViewController.commitButtonTapped))
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTextView.inputAccessoryView = kbToolBar
+    }
+    func commitButtonTapped (){
+        self.view.endEditing(true)
     }
     
     

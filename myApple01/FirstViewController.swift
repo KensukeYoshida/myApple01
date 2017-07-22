@@ -193,7 +193,7 @@ class FirstViewController: UIViewController {
             myDefault.synchronize()
             
             //配列に用意している単語データをCoreDataに保存
-            var startwords = ["プログラミング","プログラミング", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","エンターテインメント","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書"]
+            var startwords = ["エンタメ","エンタメ", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書"]
             
             //Words:存在チェック
             for word:String in startwords{
