@@ -17,6 +17,8 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var myLabel2: UILabel!
     
     @IBOutlet weak var myLabel3: UILabel!
+    
+    
 
     var words = [""]
     var words2 = [""]

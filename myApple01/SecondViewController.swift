@@ -18,9 +18,11 @@ class SecondViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        comment.text = "自分の思いついた単語を追加して\nオリジナルの単語帳を作成しましょう"
         read()
     }
     
+    @IBOutlet weak var comment: UILabel!
     
     
     @IBAction func tapReturn(_ sender: UITextField) {
@@ -37,6 +39,7 @@ class SecondViewController: UIViewController{
         
         //どのエンティティからdataを取得してくるか設定
         let query : NSFetchRequest<Words> = Words.fetchRequest()
+        
         
         do{
             //データを一括取得

@@ -60,62 +60,34 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         cell.myLabel1?.text = task.value(forKey: "title1")as?String
         cell.myLabel2?.text = task.value(forKey: "title2")as?String
         cell.myLabel3?.text = task.value(forKey: "title3")as?String
-        cell.saveDateLabel?.text = task.value(forKey: "saveDate")as?String
+        df.dateFormat = "yyyy/MM/dd/ HH:mm"
+        df.timeZone = TimeZone.ReferenceType.local
+        cell.saveDateLabel?.text = df.string(for: task.value(forKey: "saveDate")as?Date)
         
         
         
 //        cell.myLabel1.text = words[indexPath.row]
 //        cell.myLabel2.text = words2[indexPath.row]
 //        cell.myLabel3.text = words3[indexPath.row]
-//        cell.saveDateLabel.text = time[indexPath.row]
+    //  cell.saveDateLabel.text = time[indexPath.row]
         
         return cell
         
     }
     
-    
 
-    //ボタン押したときの処理
-    @IBAction func tapBtn(_ sender: UIButton) {
-        
-       
-//            let next = storyboard!.instantiateViewController(withIdentifier: "DetailViewController")
-//            self.present(next,animated: true, completion: nil)
-        
-        
-
-    }
     
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "一覧"
 
-//  　右上ボタン押した時削除
-//        var rigtButton = UIBarButtonItem(title:"Edit", style:UIBarButtonItemStyle.plain, target: self, action: Selector(("showEditing:")))
-//        
-//        self.navigationItem.rightBarButtonItem = rightButton
-//
 
         //CoreDataからdataを読込処理
         read()
         
     }
-    
-//　　右上のボタン押した時削除機能
-//    @IBAction func showEditing(sender: UIBarButtonItem)
-//    {
-//        if(self.savetitleTableView.isEditing == true)
-//        {
-//            self.savetitleTableView.isEditing = false
-//            self.navigationItem.rightBarButtonItem?.title = "編集"
-//        }
-//        else
-//        {
-//            self.savetitleTableView.isEditing = true
-//            self.navigationItem.rightBarButtonItem?.title = "削除"
-//        }
-//    }
-//
     
   
     
@@ -129,21 +101,30 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         //どのエンティティからデータを取得してくるか設定
         let query : NSFetchRequest<Ideas> = Ideas.fetchRequest()
+//        query.sortDescriptors = [NSSortDescriptor(key:"saveDate", ascending: false)]
         
         //エラーが起きやすく、例外処理を書く必要がありそうな処理はdoで囲んでおく必要がある
         //例)CoreDataのようなDB処理、インターネット接続
         do{
+            //降順かつCoreDateの取得し表示
+            let fetchRequest : NSFetchRequest<Ideas> = Ideas.fetchRequest()
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key:"saveDate", ascending: false)]
+
+            wordsArray = try viewContext.fetch(fetchRequest)
+            
             //データを取得
-            let fetchResults = try viewContext.fetch(query)
-            wordsArray = try viewContext.fetch(Ideas.fetchRequest())
+//            let fetchResults = try viewContext.fetch(query)
+//            wordsArray = try viewContext.fetch(Ideas.fetchRequest())
             
             //ループで一行ずつ表示
-            for result:AnyObject in fetchResults{
+            for result:AnyObject in wordsArray{
                 let title: String = result.value(forKey:"title1") as! String
                 
                  let title2: String = result.value(forKey:"title2") as! String
                 
                 let title3: String = result.value(forKey:"title3") as! String
+                
+                
                 
                 
                 

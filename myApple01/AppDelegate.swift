@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedWord1:String = ""
     var selectedWord2:String = ""
     var selectedWord3:String = ""
+    var memo:String = ""
     
     var context : String = ""
     

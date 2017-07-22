@@ -27,6 +27,8 @@ class DetailViewController: UIViewController {
     var title2 = [""]
     var title3 = [""]
     
+  
+    
     var memo = [""]
     
     
@@ -37,11 +39,13 @@ class DetailViewController: UIViewController {
     
     let now = Date()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        self.title = "メモ追加"
+
+      //        myLabel1.layer.cornerRadius = 50.0 // 角丸のサイズ
+
         
         makeKeybord()
         
@@ -63,6 +67,8 @@ class DetailViewController: UIViewController {
         
         //どのエンティティからdataを取得してくるか設定
         let query:NSFetchRequest<Ideas> = Ideas.fetchRequest()
+        
+        query.sortDescriptors = [NSSortDescriptor(key:"saveDate", ascending: false)]
         
         do{
             //データを一括取得
