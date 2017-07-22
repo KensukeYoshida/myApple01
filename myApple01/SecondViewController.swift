@@ -20,6 +20,8 @@ class SecondViewController: UIViewController{
         super.viewDidLoad()
         comment.text = "自分の思いついた単語を追加して\nオリジナルの単語帳を作成しましょう"
         read()
+        
+        makeKeybord()
     }
     
     @IBOutlet weak var comment: UILabel!
@@ -27,6 +29,7 @@ class SecondViewController: UIViewController{
     
     @IBAction func tapReturn(_ sender: UITextField) {
     }
+    
     
     
     //すでに存在するデータの読込処理
@@ -53,6 +56,29 @@ class SecondViewController: UIViewController{
        }catch{
        }
     }
+    
+    func makeKeybord(){
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(SecondViewController.commitButtonTapped))
+        
+        kbToolBar.items = [spacer, commitButton]
+        txtTitle.inputAccessoryView = kbToolBar
+    }
+    func commitButtonTapped (){
+        self.view.endEditing(true)
+    }
+
+
+    
 
     
     //OKボタン押された時、CoreDate追加
@@ -112,6 +138,8 @@ class SecondViewController: UIViewController{
         present(alertController,animated: true,completion: nil)
         
     }
+    
+    
     
 
     override func didReceiveMemoryWarning() {

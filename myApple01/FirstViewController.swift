@@ -177,6 +177,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         self.title = "掛け算の発想法"
+        
         //ユーザーデフォルトを用意する
         let myDefault = UserDefaults.standard
         

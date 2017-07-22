@@ -85,8 +85,12 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
 
         //CoreDataからdataを読込処理
-        read()
+        //read()
         
+    }
+    
+    override func  viewWillAppear(_ animated: Bool){
+        read()
     }
     
   

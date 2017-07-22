@@ -45,7 +45,9 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "関連単語の追加"
         
+        makeKeybord()
     }
     
     
@@ -215,7 +217,28 @@ class SearchViewController: UIViewController,XMLParserDelegate,UITextFieldDelega
             }catch{
             }
         }
-}
+    }
+    
+    func makeKeybord(){
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(SecondViewController.commitButtonTapped))
+        
+        kbToolBar.items = [spacer, commitButton]
+        txtSearchword.inputAccessoryView = kbToolBar
+    }
+    func commitButtonTapped (){
+        self.view.endEditing(true)
+    }
+
     
     
     override func didReceiveMemoryWarning() {

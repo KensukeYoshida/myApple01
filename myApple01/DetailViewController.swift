@@ -111,7 +111,7 @@ class DetailViewController: UIViewController {
     
     func makeKeybord(){
         // 仮のサイズでツールバー生成
-        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 280, height: 20))
         kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
         
         kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
