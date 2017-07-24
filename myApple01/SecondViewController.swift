@@ -18,7 +18,9 @@ class SecondViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        comment.text = "自分の思いついた単語を追加して\nオリジナルの単語帳を作成しましょう"
+        comment.text = "オリジナルの単語帳を作成しましょう"
+//        "自分の思いついた単語を追加して\nオリジナルの単語帳を作成しましょう"
+        
         read()
         
         makeKeybord()
