@@ -91,6 +91,7 @@ class SaveViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     override func  viewWillAppear(_ animated: Bool){
         read()
+        savetitleTableView.reloadData()
     }
     
   
