@@ -177,7 +177,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.title = "掛ける発想"
+         self.title = "ひらめきの種"
         
         //ユーザーデフォルトを用意する
         let myDefault = UserDefaults.standard
@@ -195,7 +195,7 @@ class FirstViewController: UIViewController {
             myDefault.synchronize()
             
             //配列に用意している単語データをCoreDataに保存
-            var startwords = ["エンタメ","エンタメ", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書"]
+            var startwords = ["カメラ","カメラ", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書","SNS","ドラッカー","野球","宇宙","時計","IoT","仏教","仮想現実","ラップ","コーヒー","メガネ","掃除","ペン","パソコン","ファッション","ロボット","医療","手帳","文具","アウトドア","車","電動","旅行","学校","幽霊","ゲーム","テレビ","海外","カフェ","留学","時間","金","ラーメン","寿司","美女","美男","家","過疎","英語","拡張現実","銀行","仮想通貨","ビッグデータ","花火"]
             
             //Words:存在チェック
             for word:String in startwords{

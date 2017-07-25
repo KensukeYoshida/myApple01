@@ -256,7 +256,7 @@
 				TargetAttributes = {
 					47B7DF481F02975F0073E63B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PD2N6R6W69;
+						DevelopmentTeam = 6CDT6475YW;
 						ProvisioningStyle = Automatic;
 					};
 					47B7DF5E1F02975F0073E63B = {
@@ -495,11 +495,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD2N6R6W69;
+				DEVELOPMENT_TEAM = 6CDT6475YW;
 				INFOPLIST_FILE = myApple01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kensukeyoshida.myApple01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kensukeyoshida.ideaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -509,11 +509,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD2N6R6W69;
+				DEVELOPMENT_TEAM = 6CDT6475YW;
 				INFOPLIST_FILE = myApple01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kensukeyoshida.myApple01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kensukeyoshida.ideaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
