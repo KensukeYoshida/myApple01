@@ -9,7 +9,16 @@
 import UIKit
 import CoreData
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController{//,GADBannerViewDelegate {
+    
+//    //自分のAdMobIDを指定
+//    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
+//    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
+//    
+//    
+//    let AdMobTest:Bool = true
+//    let SimulatorTest:Bool = true
+
     
     @IBOutlet weak var txtTitle1: UILabel!
     
@@ -177,6 +186,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //showAdBanner()
+
+        
          self.title = "ひらめきの種"
         
         //ユーザーデフォルトを用意する
@@ -195,7 +207,7 @@ class FirstViewController: UIViewController {
             myDefault.synchronize()
             
             //配列に用意している単語データをCoreDataに保存
-            var startwords = ["カメラ","カメラ", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書","SNS","ドラッカー","野球","宇宙","時計","IoT","仏教","仮想現実","ラップ","コーヒー","メガネ","掃除","ペン","パソコン","ファッション","ロボット","医療","手帳","文具","アウトドア","車","電動","旅行","学校","幽霊","ゲーム","テレビ","海外","カフェ","留学","時間","金","ラーメン","寿司","美女","美男","家","過疎","英語","拡張現実","銀行","仮想通貨","ビッグデータ","花火"]
+            var startwords = ["カメラ","カメラ", "シンセサイザー", "地方","りんご","人工知能","電卓","音楽","お笑い","宗教","お祭り","動画","ドローン","インターネット","お酒","辞書","SNS","ドラッカー","野球","宇宙","時計","IoT","仏教","仮想現実","ラップ","コーヒー","メガネ","掃除","ペン","パソコン","ファッション","ロボット","医療","手帳","文具","アウトドア","車","電動","旅行","学校","幽霊","ゲーム","テレビ","海外","カフェ","留学","時間","金","ラーメン","寿司","女子高生","家","過疎","英語","拡張現実","銀行","仮想通貨","ビッグデータ","花火","Wifi","お洒落","ホテル", "スニーカー", "枕", "船", "飛行機", "東京", "サーフィン", "山", "海", "自動", "家族", "仏教", "プログラミング", "高速", "政治", "スケボー", "杖", "高齢", "夏休み", "倉庫", "空き家", "落語", "哲学", "映画","レゲエ","若者","ラーメン"]
             
             //Words:存在チェック
             for word:String in startwords{
@@ -299,12 +311,57 @@ class FirstViewController: UIViewController {
     }
 
     
-    
+//    //広告を表示させる
+//    func showAdBanner(){
+//        
+//        //バナー用のビューを作成
+//        var admobView = GADBannerView()
+//        
+//        admobView = GADBannerView(adSize: kGADAdSizeBanner)
+//        
+//        //バナーを下に配置
+//        admobView.frame.origin = CGPoint(x: 0, y: self.view.frame.size.height - admobView.frame.height)
+//        
+//        //バナーを横幅いっぱいに配置
+//        admobView.frame.size = CGSize(width: self.view.frame.width , height: admobView.frame.height)
+//        
+//        //各種設定
+//        admobView.adUnitID = AdMobID
+//        admobView.delegate = self as! GADBannerViewDelegate
+//        admobView.rootViewController = self
+//        
+//        //広告のリクエスト
+//        let admobRequest = GADRequest()
+//        
+//        //テストパターンによって設定を変える
+//        if(AdMobTest == true){
+//            //simulatorテスト
+//            if(SimulatorTest == true){
+//                admobRequest.testDevices = [kGADSimulatorID]
+//                print("simulator")
+//            }else{
+//                //実機テスト
+//                admobRequest.testDevices = [TEST_DEVICE_ID]
+//                print("device")
+//                
+//            }
+//            
+//        }
+//        
+//        //リクエストのロード
+//        admobView.load(admobRequest)
+//        
+//        //バナー画面に追加
+//        self.view.addSubview(admobView)
+//        
+//        
+//        
+//    }
     //メモリ不足のとき表示
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
 }
-

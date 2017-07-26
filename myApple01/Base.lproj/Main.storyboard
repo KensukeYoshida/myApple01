@@ -24,31 +24,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="りんご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocq-Da-bK2">
-                                <rect key="frame" x="112" y="317" width="72" height="12"/>
+                                <rect key="frame" x="112" y="273" width="72" height="22"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人工知能" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfc-OP-Lj0">
-                                <rect key="frame" x="112" y="317" width="72" height="12"/>
+                                <rect key="frame" x="112" y="273" width="72" height="22"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="シンセサイザー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5be-w6-syk">
-                                <rect key="frame" x="112" y="317" width="72" height="12"/>
+                                <rect key="frame" x="112" y="273" width="72" height="22"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u6m-G5-OUX">
-                                <rect key="frame" x="0.0" y="108" width="320" height="362"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-Ff-Bs9">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="362"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="0.69207512842465757" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -400,7 +400,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="りんご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-hH-sPE">
-                                <rect key="frame" x="0.0" y="75" width="100" height="20"/>
+                                <rect key="frame" x="0.0" y="31" width="100" height="15"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="OZ3-OX-bgd"/>
@@ -416,31 +416,31 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBv-ND-RVc">
-                                <rect key="frame" x="16" y="128" width="35" height="20"/>
+                                <rect key="frame" x="16" y="79" width="35" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-ab-Z1h">
-                                <rect key="frame" x="16" y="159" width="288" height="250"/>
+                                <rect key="frame" x="16" y="110" width="288" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakeru.png" translatesAutoresizingMaskIntoConstraints="NO" id="T76-fk-GLy">
-                                <rect key="frame" x="100" y="76" width="10" height="20"/>
+                                <rect key="frame" x="100" y="32" width="10" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="T9h-EJ-G2d"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakeru.png" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-3Z-zEP">
-                                <rect key="frame" x="210" y="76" width="10" height="20"/>
+                                <rect key="frame" x="210" y="32" width="10" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="d8M-DJ-q0h"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クラウドファンディング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-Lh-e3l">
-                                <rect key="frame" x="221" y="75" width="100" height="20"/>
+                                <rect key="frame" x="221" y="31" width="100" height="15"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -453,7 +453,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-eK-wqa">
-                                <rect key="frame" x="273" y="121" width="31" height="30"/>
+                                <rect key="frame" x="273" y="72" width="31" height="30"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="tapSave:" destination="c1r-BK-YFe" eventType="touchUpInside" id="x0z-EC-YDh"/>
@@ -461,7 +461,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人工知能" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gC-fM-D6e">
-                                <rect key="frame" x="110" y="75" width="100" height="20"/>
+                                <rect key="frame" x="110" y="31" width="100" height="15"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -533,8 +533,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-Ww-eyK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="795"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="731"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-TG-ZOJ">
+                                        <rect key="frame" x="8" y="187" width="320" height="731"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-yk-KnX">
                                                 <rect key="frame" x="281" y="38" width="31" height="30"/>
@@ -844,7 +844,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1685.625" y="858.80281690140851"/>
+            <point key="canvasLocation" x="2683.125" y="858.80281690140851"/>
         </scene>
         <!--Search Resoult View Controller-->
         <scene sceneID="9nL-xu-k4J">
@@ -909,7 +909,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYJ-b9-mHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814.375" y="756.33802816901414"/>
+            <point key="canvasLocation" x="3771" y="776"/>
         </scene>
         <!--追加-->
         <scene sceneID="wg7-f3-ORb">
@@ -1022,6 +1022,262 @@
             </objects>
             <point key="canvasLocation" x="-384.375" y="1431.338028169014"/>
         </scene>
+        <!--Torend Word View-->
+        <scene sceneID="fAC-6Z-u8l">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBt-Ua-32C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="CZm-jQ-APX" customClass="TorendWordView" customModule="myApple01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KJq-Pf-ln3"/>
+                        <viewControllerLayoutGuide type="bottom" id="awv-8o-Ss8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hO0-dd-a8F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="トップ10 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dp-yg-tRx">
+                                <rect key="frame" x="29" y="83" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-Ac-hiD">
+                                <rect key="frame" x="39" y="112" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField1:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="Pwl-YL-3q4"/>
+                                    <action selector="myTxtField1:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="zaS-q3-9Xk"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-CL-L0k">
+                                <rect key="frame" x="39" y="150" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField2:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="5oq-Ic-TfB"/>
+                                    <action selector="myTxtField2:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="iIT-iD-2te"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dl-D3-G6a">
+                                <rect key="frame" x="39" y="189" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField3:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="AQ8-xc-Ud4"/>
+                                    <action selector="myTxtField3:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="qcb-J7-p0b"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-XQ-40i">
+                                <rect key="frame" x="39" y="227" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField4:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="Qjh-Ar-6df"/>
+                                    <action selector="myTxtField4:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="gP4-Fq-CYL"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0y-1x-YuE">
+                                <rect key="frame" x="39" y="265" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField5:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="DFA-ug-Php"/>
+                                    <action selector="myTxtField5:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="p5D-sB-1vP"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwR-Lq-hrl">
+                                <rect key="frame" x="39" y="341" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField6:" destination="9mO-nw-EHE" eventType="editingDidEnd" id="Eie-si-05x"/>
+                                    <action selector="myTxtField7:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="pwj-tW-dh9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMG-Kf-8Ur">
+                                <rect key="frame" x="39" y="303" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField6:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="LPr-Tm-Ec4"/>
+                                    <action selector="myTxtField7:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="1OL-3M-xTO"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8BB-we-Du1">
+                                <rect key="frame" x="39" y="379" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField8:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="Xzx-X1-z4K"/>
+                                    <action selector="myTxtField8:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="aWs-k4-ibT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-b2-f03">
+                                <rect key="frame" x="39" y="417" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField9:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="kL4-Fj-4XW"/>
+                                    <action selector="myTxtField9:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="upx-KW-g5h"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-D8-4HU">
+                                <rect key="frame" x="39" y="455" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="myTxtField10:" destination="CZm-jQ-APX" eventType="editingDidEnd" id="M5Z-oV-FUl"/>
+                                    <action selector="myTxtField10:" destination="9mO-nw-EHE" eventType="editingDidEnd" id="UmR-Xq-BRE"/>
+                                    <action selector="myTxtField10:" destination="9mO-nw-EHE" eventType="editingDidEndOnExit" id="eaa-Zi-wa1"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rd-Bn-2TQ">
+                                <rect key="frame" x="273" y="378" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn8:" destination="9mO-nw-EHE" eventType="touchUpInside" id="boV-Um-Ygh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-5h-cNJ">
+                                <rect key="frame" x="273" y="302" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn6:" destination="9mO-nw-EHE" eventType="touchUpInside" id="LKB-gN-6Mv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBP-yb-2yJ">
+                                <rect key="frame" x="273" y="264" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn5:" destination="9mO-nw-EHE" eventType="touchUpInside" id="PyS-IH-hfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-Nn-Rb9">
+                                <rect key="frame" x="290" y="-46" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn2:" destination="9mO-nw-EHE" eventType="touchUpInside" id="6oF-w8-FBz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-KY-FLo">
+                                <rect key="frame" x="273" y="226" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn4:" destination="9mO-nw-EHE" eventType="touchUpInside" id="nk3-Ye-8qj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD2-In-ZNT">
+                                <rect key="frame" x="273" y="416" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn9:" destination="9mO-nw-EHE" eventType="touchUpInside" id="O4C-SE-zFf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYD-rz-PGL">
+                                <rect key="frame" x="273" y="454" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn10:" destination="9mO-nw-EHE" eventType="touchUpInside" id="icq-fY-EXY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L6-be-bjy">
+                                <rect key="frame" x="273" y="340" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn7:" destination="9mO-nw-EHE" eventType="touchUpInside" id="Svy-3n-haF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-Sf-FJX">
+                                <rect key="frame" x="273" y="188" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn3:" destination="9mO-nw-EHE" eventType="touchUpInside" id="L9g-4N-pbc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-dg-N38">
+                                <rect key="frame" x="290" y="-84" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn1:" destination="9mO-nw-EHE" eventType="touchUpInside" id="tPe-4Q-eLR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVx-Gr-eYA">
+                                <rect key="frame" x="281" y="34" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn8:" destination="9mO-nw-EHE" eventType="touchUpInside" id="v6D-H3-etg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyT-Mn-tej">
+                                <rect key="frame" x="273" y="111" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn1:" destination="CZm-jQ-APX" eventType="touchUpInside" id="bT5-2s-JEQ"/>
+                                    <action selector="tapAddBtn9:" destination="9mO-nw-EHE" eventType="touchUpInside" id="i7s-m3-PkS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-q7-GjD">
+                                <rect key="frame" x="273" y="149" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn10:" destination="9mO-nw-EHE" eventType="touchUpInside" id="8ru-gf-AHL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qdi-FL-d78"/>
+                    <connections>
+                        <outlet property="myTxtField1" destination="uMf-Ac-hiD" id="PD5-Eb-NLH"/>
+                        <outlet property="myTxtField10" destination="SgJ-D8-4HU" id="xuE-Vo-RBb"/>
+                        <outlet property="myTxtField2" destination="CqM-CL-L0k" id="gD4-Ux-Ims"/>
+                        <outlet property="myTxtField3" destination="9dl-D3-G6a" id="gib-EX-Mxf"/>
+                        <outlet property="myTxtField4" destination="YSe-XQ-40i" id="oHk-7y-5fU"/>
+                        <outlet property="myTxtField5" destination="G0y-1x-YuE" id="TGd-Yi-PTx"/>
+                        <outlet property="myTxtField6" destination="iMG-Kf-8Ur" id="ovI-Wt-RWu"/>
+                        <outlet property="myTxtField7" destination="iwR-Lq-hrl" id="mao-c7-sOc"/>
+                        <outlet property="myTxtField8" destination="8BB-we-Du1" id="3of-MO-vmF"/>
+                        <outlet property="myTxtField9" destination="ZGV-b2-f03" id="fX1-yY-Ojw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1730.625" y="1708.0985915492959"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -1099,6 +1355,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9c-PG-OZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="780" y="-42"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="SdS-kW-L1f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ICc-4n-wKF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="54K-IM-pz3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GiS-xX-KPa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CZm-jQ-APX" kind="relationship" relationship="rootViewController" id="gi3-fJ-Mor"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgI-gd-WkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783.75" y="1515.8450704225352"/>
         </scene>
     </scenes>
     <resources>

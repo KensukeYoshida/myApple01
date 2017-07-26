@@ -19,6 +19,7 @@
 		4729761C1F0345BC0047DBFB /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 4729761B1F0345BC0047DBFB /* reload.png */; };
 		4729761E1F034E280047DBFB /* memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4729761D1F034E280047DBFB /* memo.png */; };
 		472976201F035D8B0047DBFB /* kakeru.png in Resources */ = {isa = PBXBuildFile; fileRef = 4729761F1F035D8B0047DBFB /* kakeru.png */; };
+		472BA5831F286B2400139EE8 /* TorendWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472BA5821F286B2400139EE8 /* TorendWordView.swift */; };
 		472F7ECE1F04E48F00C2C75B /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 472F7ECD1F04E48F00C2C75B /* plus.png */; };
 		475BC5731F0639F600284623 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 475BC5711F0639F600284623 /* Model.xcdatamodeld */; };
 		47B7DF4D1F02975F0073E63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DF4C1F02975F0073E63B /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		4729761B1F0345BC0047DBFB /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		4729761D1F034E280047DBFB /* memo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memo.png; sourceTree = "<group>"; };
 		4729761F1F035D8B0047DBFB /* kakeru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakeru.png; sourceTree = "<group>"; };
+		472BA5821F286B2400139EE8 /* TorendWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorendWordView.swift; sourceTree = "<group>"; };
 		472F7ECD1F04E48F00C2C75B /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		475BC5721F0639F600284623 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		47B7DF491F02975F0073E63B /* myApple01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApple01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				47B7DF5A1F02975F0073E63B /* Info.plist */,
 				475BC5711F0639F600284623 /* Model.xcdatamodeld */,
 				470077F31F14BF9D00AA8313 /* CustomCell.swift */,
+				472BA5821F286B2400139EE8 /* TorendWordView.swift */,
 			);
 			path = myApple01;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				47B7DF4D1F02975F0073E63B /* AppDelegate.swift in Sources */,
 				470077F21F14A55300AA8313 /* Words+CoreDataProperties.swift in Sources */,
 				47B7DF4F1F02975F0073E63B /* FirstViewController.swift in Sources */,
+				472BA5831F286B2400139EE8 /* TorendWordView.swift in Sources */,
 				470077EF1F14A55300AA8313 /* Ideas+CoreDataClass.swift in Sources */,
 				475BC5731F0639F600284623 /* Model.xcdatamodeld in Sources */,
 				4728C9711F0E13140012AFAB /* DetailViewController.swift in Sources */,
