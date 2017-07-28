@@ -1302,6 +1302,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="I2C-DO-fYd"/>
                         <segue destination="U2B-Cw-60n" kind="relationship" relationship="viewControllers" id="PdV-TQ-Fo4"/>
                         <segue destination="dU5-Lq-37b" kind="relationship" relationship="viewControllers" id="3jJ-OG-SjZ"/>
+                        <segue destination="ICc-4n-wKF" kind="relationship" relationship="viewControllers" id="xf6-vG-QNW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

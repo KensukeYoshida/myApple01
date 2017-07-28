@@ -330,22 +330,22 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
                 myTxtField1.text = string
             case 2:
                 myTxtField2.text = string
-//            case 3:
-//                myTxtField3.text = attributeDict["data"]!
-//            case 4:
-//                myTxtField4.text = attributeDict["data"]!
-//            case 5:
-//                myTxtField5.text = attributeDict["data"]!
-//            case 6:
-//                myTxtField6.text = attributeDict["data"]!
-//            case 7:
-//                myTxtField7.text = attributeDict["data"]!
-//            case 8:
-//                myTxtField8.text = attributeDict["data"]!
-//            case 9:
-//                myTxtField9.text = attributeDict["data"]!
-//            case 10:
-//                myTxtField10.text = attributeDict["data"]!
+            case 3:
+                myTxtField3.text = string
+            case 4:
+                myTxtField4.text = string
+            case 5:
+                myTxtField5.text = string
+            case 6:
+                myTxtField6.text = string
+            case 7:
+                myTxtField7.text = string
+            case 8:
+                myTxtField8.text = string
+            case 9:
+                myTxtField9.text = string
+            case 10:
+                myTxtField10.text = string
                 
             default:
                 print(myCount)
