@@ -33,6 +33,8 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
     @IBOutlet weak var myTxtField10: UITextField!
     
     var myCount = 1
+    
+    var titleFlag = false
 
 
     override func viewDidLoad() {
@@ -41,6 +43,8 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
         self.title = "トレンドワード"
         
         //makeKeybord()
+        
+        loadxml()
         
     }
     
@@ -148,105 +152,104 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
     func addword(addtext:String){
         var checkFlag = false
         
-//        //Words:存在チェック
+        //Words:存在チェック
 //        for word:String in words{
 //            if addtext == word {
 //                checkFlag = true
 //            }
-        
-        }
-        
-        
-//        if checkFlag == false{
-//            
-//            //AppDelegateのインスタンスを用意しておく (as!はダウンキャスト ＜値＞as!＜型＞)
-//            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-//            
-//            //エンティティを操作するためのオブジェクトを作成
-//            let viewContext = appDelegate.persistentContainer.viewContext
-//            
-//            //Wordsエンティティオブジェクトを作成
-//            let Words = NSEntityDescription.entity(forEntityName: "Words", in: viewContext)
-//            
-//            //Wordsエンティティにレコード(行)を挿入するためのオブジェクトを作成
-//            let newRecord = NSManagedObject(entity: Words!, insertInto: viewContext)
-//            //③上記まで
-//            
-//            
-//            //追加したいdata(txtTitleに入力された文字)のセット
-//            newRecord.setValue(addtext, forKey: "title")//値の代入
-//            newRecord.setValue(Date(),forKey: "saveDate")
-//            //Date():現在日時がセットできる
-//            
-//            //レコード（行）の即時保存
-//            do{
-//                try viewContext.save()
-//            }catch{
-//            }
+//        
 //        }
-//    }
-//    
-//    func makeKeybord(){
-//        // 仮のサイズでツールバー生成
-//        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-//        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
-//        
-//        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
-//        
-//        // スペーサー
-//        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
-//        
-//        // 閉じるボタン
-//        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(SecondViewController.commitButtonTapped))
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        txtSearchword.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField1.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField2.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField3.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField4.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField5.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField6.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField7.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField8.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField9.inputAccessoryView = kbToolBar
-//        
-//        kbToolBar.items = [spacer, commitButton]
-//        myTxtField10.inputAccessoryView = kbToolBar
-//    }
-//    func commitButtonTapped (){
-//        self.view.endEditing(true)
-//    }
-//    
-//    
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-//    
-//    
-//    func loadxml(){
-//        
+        
+        
+        if checkFlag == false{
+            
+            //AppDelegateのインスタンスを用意しておく (as!はダウンキャスト ＜値＞as!＜型＞)
+            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            //エンティティを操作するためのオブジェクトを作成
+            let viewContext = appDelegate.persistentContainer.viewContext
+            
+            //Wordsエンティティオブジェクトを作成
+            let Words = NSEntityDescription.entity(forEntityName: "Words", in: viewContext)
+            
+            //Wordsエンティティにレコード(行)を挿入するためのオブジェクトを作成
+            let newRecord = NSManagedObject(entity: Words!, insertInto: viewContext)
+            //③上記まで
+            
+            
+            //追加したいdata(txtTitleに入力された文字)のセット
+            newRecord.setValue(addtext, forKey: "title")//値の代入
+            newRecord.setValue(Date(),forKey: "saveDate")
+            //Date():現在日時がセットできる
+            
+            //レコード（行）の即時保存
+            do{
+                try viewContext.save()
+            }catch{
+            }
+        }
+    }
+    
+    func makeKeybord(){
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(SecondViewController.commitButtonTapped))
+        
+        kbToolBar.items = [spacer, commitButton]
+               
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField1.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField2.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField3.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField4.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField5.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField6.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField7.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField8.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField9.inputAccessoryView = kbToolBar
+        
+        kbToolBar.items = [spacer, commitButton]
+        myTxtField10.inputAccessoryView = kbToolBar
+    }
+    func commitButtonTapped (){
+        self.view.endEditing(true)
+    }
+
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func loadxml(){
+        
 //        //URLエンコードを行い、URLの一部を作成
 //        let encodedString = CFURLCreateStringByAddingPercentEscapes(
 //            nil,
@@ -254,41 +257,79 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
 //            nil,
 //            "!*'();:@&=+$,/?%#[]" as CFString!,
 //            CFStringBuiltInEncodings.UTF8.rawValue) as String
-//        
-//        print(txtSearchword.text)
-//        
-//        
-//        let url_text = "http://www.google.com/complete/search?hl=en&q="+encodedString+"&output=toolbar".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-//        
-//        
-//        
-//        
-//        let url = URL(string: url_text)
-//        
-//        // インターネット上のXMLを取得し、NSXMLParserに読み込む
-//        let parser = XMLParser(contentsOf: url!)
-//        
-//        parser?.delegate = self;
-//        parser?.parse()
-//    }
-//    
-//    // XML解析開始時に実行されるメソッド
-//    func parserDidStartDocument(_ parser: XMLParser) {
-//        print("XML解析開始しました")
-//    }
-//    
-//    // 解析中に要素の開始タグがあったときに実行されるメソッド
-//    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-//        print("開始タグ:" + elementName)
-//        
-//        if elementName == "suggestion"{
-//            print(attributeDict["data"])
-//            
-//            switch myCount {
-//            case 1:
-//                myTxtField1.text = attributeDict["data"]!
-//            case 2:
-//                myTxtField2.text = attributeDict["data"]!
+        
+        
+        let url_text = "http://www.nilab.info/buzztube/buzztube.xml"
+        
+        
+        
+        
+        let url = URL(string: url_text)
+        
+        // インターネット上のXMLを取得し、NSXMLParserに読み込む
+        let parser = XMLParser(contentsOf: url!)
+        
+        parser?.delegate = self;
+        parser?.parse()
+    }
+    
+    // XML解析開始時に実行されるメソッド
+    func parserDidStartDocument(_ parser: XMLParser) {
+        print("XML解析開始しました")
+    }
+    
+    // 解析中に要素の開始タグがあったときに実行されるメソッド
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        print("開始タグ:" + elementName)
+        
+        if elementName == "title"{
+            titleFlag=true
+        }
+        
+        if elementName == "suggestion"{
+            print(attributeDict["data"])
+            
+            switch myCount {
+            case 1:
+                myTxtField1.text = attributeDict["data"]!
+            case 2:
+                myTxtField2.text = attributeDict["data"]!
+            case 3:
+                myTxtField3.text = attributeDict["data"]!
+            case 4:
+                myTxtField4.text = attributeDict["data"]!
+            case 5:
+                myTxtField5.text = attributeDict["data"]!
+            case 6:
+                myTxtField6.text = attributeDict["data"]!
+            case 7:
+                myTxtField7.text = attributeDict["data"]!
+            case 8:
+                myTxtField8.text = attributeDict["data"]!
+            case 9:
+                myTxtField9.text = attributeDict["data"]!
+            case 10:
+                myTxtField10.text = attributeDict["data"]!
+                
+            default:
+                print(myCount)
+            }
+            
+            myCount += 1
+        }
+    }
+    
+    // 開始タグと終了タグでくくられたデータがあったときに実行されるメソッド
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        print("要素:" + string)
+        
+        if titleFlag {
+            
+            switch myCount {
+            case 1:
+                myTxtField1.text = string
+            case 2:
+                myTxtField2.text = string
 //            case 3:
 //                myTxtField3.text = attributeDict["data"]!
 //            case 4:
@@ -305,33 +346,33 @@ class TorendWordView: UIViewController,XMLParserDelegate,UITextFieldDelegate {
 //                myTxtField9.text = attributeDict["data"]!
 //            case 10:
 //                myTxtField10.text = attributeDict["data"]!
-//                
-//            default:
-//                print(myCount)
-//            }
-//            
-//            myCount += 1
-//        }
-//    }
-//    
-//    // 開始タグと終了タグでくくられたデータがあったときに実行されるメソッド
-//    func parser(_ parser: XMLParser, foundCharacters string: String) {
-//        print("要素:" + string)
-//    }
-//    
-//    // 解析中に要素の終了タグがあったときに実行されるメソッド
-//    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-//        print("終了タグ:" + elementName)
-//    }
-//    
-//    // XML解析終了時に実行されるメソッド
-//    func parserDidEndDocument(_ parser: XMLParser) {
-//        print("XML解析終了しました")
-//    }
-//    
-//    // 解析中にエラーが発生した時に実行されるメソッド
-//    private func parser(parser: XMLParser, parseErrorOccurred parseError: NSError) {
-//        print("エラー:" + parseError.localizedDescription)
-//    }
+                
+            default:
+                print(myCount)
+            }
+            
+            myCount += 1
+
+        }
+    }
+    
+    // 解析中に要素の終了タグがあったときに実行されるメソッド
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        print("終了タグ:" + elementName)
+        
+        if elementName == "title"{
+            titleFlag=false
+        }
+    }
+    
+    // XML解析終了時に実行されるメソッド
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print("XML解析終了しました")
+    }
+    
+    // 解析中にエラーが発生した時に実行されるメソッド
+    private func parser(parser: XMLParser, parseErrorOccurred parseError: NSError) {
+        print("エラー:" + parseError.localizedDescription)
+    }
 
 }

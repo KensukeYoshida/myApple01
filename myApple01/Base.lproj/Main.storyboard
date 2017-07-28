@@ -1025,7 +1025,6 @@
         <!--Torend Word View-->
         <scene sceneID="fAC-6Z-u8l">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kBt-Ua-32C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="CZm-jQ-APX" customClass="TorendWordView" customModule="myApple01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KJq-Pf-ln3"/>
@@ -1158,6 +1157,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
+                                    <action selector="tapAddBtn8:" destination="CZm-jQ-APX" eventType="touchUpInside" id="MdP-Bx-uYm"/>
                                     <action selector="tapAddBtn8:" destination="9mO-nw-EHE" eventType="touchUpInside" id="boV-Um-Ygh"/>
                                 </connections>
                             </button>
@@ -1167,6 +1167,7 @@
                                 <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="tapAddBtn6:" destination="9mO-nw-EHE" eventType="touchUpInside" id="LKB-gN-6Mv"/>
+                                    <action selector="tapAddBtn6:" destination="CZm-jQ-APX" eventType="touchUpInside" id="p8f-MP-rZt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBP-yb-2yJ">
@@ -1174,6 +1175,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
+                                    <action selector="tapAddBtn5:" destination="CZm-jQ-APX" eventType="touchUpInside" id="7DV-6y-roP"/>
                                     <action selector="tapAddBtn5:" destination="9mO-nw-EHE" eventType="touchUpInside" id="PyS-IH-hfb"/>
                                 </connections>
                             </button>
@@ -1190,6 +1192,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
+                                    <action selector="tapAddBtn4:" destination="CZm-jQ-APX" eventType="touchUpInside" id="2oD-Jl-ODg"/>
                                     <action selector="tapAddBtn4:" destination="9mO-nw-EHE" eventType="touchUpInside" id="nk3-Ye-8qj"/>
                                 </connections>
                             </button>
@@ -1198,6 +1201,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
+                                    <action selector="tapAddBtn9:" destination="CZm-jQ-APX" eventType="touchUpInside" id="Bxx-FT-9O5"/>
                                     <action selector="tapAddBtn9:" destination="9mO-nw-EHE" eventType="touchUpInside" id="O4C-SE-zFf"/>
                                 </connections>
                             </button>
@@ -1206,15 +1210,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
+                                    <action selector="tapAddBtn10:" destination="CZm-jQ-APX" eventType="touchUpInside" id="8H2-DB-kyp"/>
                                     <action selector="tapAddBtn10:" destination="9mO-nw-EHE" eventType="touchUpInside" id="icq-fY-EXY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L6-be-bjy">
-                                <rect key="frame" x="273" y="340" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="追加"/>
-                                <connections>
-                                    <action selector="tapAddBtn7:" destination="9mO-nw-EHE" eventType="touchUpInside" id="Svy-3n-haF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k23-Sf-FJX">
@@ -1223,6 +1220,7 @@
                                 <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="tapAddBtn3:" destination="9mO-nw-EHE" eventType="touchUpInside" id="L9g-4N-pbc"/>
+                                    <action selector="tapAddBtn3:" destination="CZm-jQ-APX" eventType="touchUpInside" id="glU-fy-x45"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-dg-N38">
@@ -1256,6 +1254,16 @@
                                 <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="tapAddBtn10:" destination="9mO-nw-EHE" eventType="touchUpInside" id="8ru-gf-AHL"/>
+                                    <action selector="tapAddBtn2:" destination="CZm-jQ-APX" eventType="touchUpInside" id="VrL-E5-KRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L6-be-bjy">
+                                <rect key="frame" x="273" y="341" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="tapAddBtn7:" destination="9mO-nw-EHE" eventType="touchUpInside" id="Svy-3n-haF"/>
+                                    <action selector="tapAddBtn7:" destination="CZm-jQ-APX" eventType="touchUpInside" id="h1N-j7-lFq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1275,6 +1283,7 @@
                         <outlet property="myTxtField9" destination="ZGV-b2-f03" id="fX1-yY-Ojw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBt-Ua-32C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730.625" y="1708.0985915492959"/>
         </scene>
